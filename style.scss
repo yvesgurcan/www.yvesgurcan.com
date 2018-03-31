@@ -1,0 +1,155 @@
+$assets: 'assets/';
+$standard-padding: 20px;
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: black;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    color: white;
+    margin-right: 5px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: red;
+    }
+
+  }
+
+}
+
+header {
+  min-height: 96vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+  div {
+    margin: auto;
+  }
+
+  h1 {
+  
+    .lastname {
+      color: gray;
+    }
+  
+  }
+
+  #visual-menu {
+    display: flex;
+    justify-content: center;
+
+    a {
+      padding: 10px;
+
+      img {
+        max-height: 100px;
+      }
+
+    }
+
+  }
+
+}
+
+section {
+  padding: $standard-padding;
+
+  & .overlay {
+    margin: $standard-padding;
+    padding: $standard-padding;
+    background: white;
+    opacity: 0.8;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  &#doom {
+    background-image: url($assets + 'doom-cover.jpg');
+    background-size: cover;
+
+  }
+
+  &#javascript {
+    
+    #technologies {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      div {
+        padding: 10px;
+
+        img {
+          max-width: 120px;
+          max-height: 70px;
+        }
+
+      }
+      
+    }
+
+  }
+
+  &#code {
+    background: #111;
+    height: 2100px;
+    overflow: hidden;
+
+    .background {
+      text-align: left;
+      color: white;
+      transform: rotate(-1deg);
+      user-select: none;
+
+      code {
+        position: absolute;
+        margin-top: -60px;
+        margin-left: -110px;
+      }
+
+      .comment-highlight {
+        color: green;
+      }
+
+      .function-highlight {
+        color: yellow;
+      }
+
+      .variable-highlight {
+        color: lightskyblue;
+      }
+
+      .keyword-highlight {
+        color: royalblue;
+      }
+
+      .statement-highlight {
+        color: magenta;
+      }
+
+      .string-highlight {
+        color: orange;
+      }
+
+      .number-highlight {
+        color: lime;
+      }
+
+
+    }
+
+  }
+
+}
+

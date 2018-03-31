@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+  <head>
+    <title>yvesgurcan.com</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+  </head>
+  <body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    
+    <div id="root"></div>
+
+    <script id="handlebars" type="text/x-handlebars-template">
+
+      <nav>
+        <a href="#{{javascript}}">JavaScript</a>
+        <a href="#{{doom}}">Doom</a>
+        <a href="#{{french}}">French</a>
+        <a href="#{{blog}}">Blog</a>
+        <a href="#{{contact}}">Contact</a>
+      </nav>
+
+    <header>
+
+      <div>
+        <h1><span class="firstname">yves</span><span class="lastname">gurcan</span></h1>
+        <h2>Full Stack Developer</h2>
+        <h3>with a curious mind</h3>
+      </div>
+
+      <div id="visual-menu">
+        <a href="#{{github}}">
+          <img alt="GitHub profile" src="{{assets}}github.png">
+        </a>
+        <a href="#{{linkedin}}">
+          <img alt="linkedIn profile" src="{{assets}}linkedin.png">
+        </a>
+        <a href="#{{email}}">
+            <img alt="Send an email" src="{{assets}}email.png">
+          </a>
+      </div>
+
+      <div>
+        <a href="#{{contact}}">Say Hello</a>
+      </div>
+
+    </header>
+
+      <section id="{{doom}}">
+        <div class="{{overlay}}">
+          <a name="{{doom}}"></a>
+          <h4>At the beginning, there was </h4>
+          <img alt="Doom II" src="{{assets}}doom.png">
+        </div>
+      </section>
+
+      <section id="{{javascript}}">
+        <a name="{{javascript}}"></a>
+        <h4>JavaScript all the way</h4>
+        <div id="{{technologies}}">
+          <div>
+            <img alt="React" src="{{assets}}react.png">
+          </div>
+          <div>
+            <img alt="Node" src="{{assets}}node.png">
+          </div>
+          <div>
+            <img alt="MongoDB" src="{{assets}}mongo.png">
+          </div>
+        </div>
+      </section>
+
+      <section id="{{code}}">
+        <a name="{{code}}"></a>
+        <pre class="background"><code>
+          <span class="{{functionHighlight}}">MovePlayer</span> = (<span class="{{variableHighlight}}">Direction</span>) => {
+
+            <span class={{keywordHighlight}}>let</span> {<span class="{{variableHighlight}}">Player</span>, <span class="{{variableHighlight}}">NoClip</span>} = ...<span class={{keywordHighlight}}>this</span>.<span class="{{variableHighlight}}">state</span>
+            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">Dead</span>) <span class="{{statementHighlight}}">return</span> <span class={{keywordHighlight}}>false</span>
+        
+            <span class="{{commentHighlight}}">// get the target coordinates</span>
+            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">targetCoordinates</span> = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">MoveObject</span>({<span class="{{variableHighlight}}">x</span>: <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">x</span>, <span class="{{variableHighlight}}">y</span>: <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">y</span>}, <span class="{{variableHighlight}}">Direction</span>)
+        
+            <span class="{{commentHighlight}}">// out of range</span>
+            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span> > <span class="{{variableHighlight}}">WallMap</span>.<span class="{{variableHighlight}}">length</span> - <span class={{numberHighlight}}>1</span> || <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span> < <span class={{numberHighlight}}>0</span> || <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span> > <span class="{{variableHighlight}}">WallMap</span>[<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span>].<span class="{{variableHighlight}}">length</span> - <span class={{numberHighlight}}>1</span> || <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span> < <span class={{numberHighlight}}>0</span>) {
+        
+              <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">SetText</span>(<span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">Messages</span>.<span class="{{variableHighlight}}">Collision</span>)
+              <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">PlaySound</span>(<span class="{{stringHighlight}}">"cant_go_there"</span>)
+        
+              <span class="{{statementHighlight}}">return</span>
+            }
+        
+            <span class="{{commentHighlight}}">// check if there is a locked door in the way</span>
+            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">Door</span> = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">CheckLockedDoors</span>(<span class="{{variableHighlight}}">targetCoordinates</span>)
+            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">Door</span>.<span class="{{variableHighlight}}">Locked</span> && !<span class="{{variableHighlight}}">NoClip</span>) {
+              <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">LockedDoor</span> = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">UnlockDoor</span>(<span class="{{variableHighlight}}">Door</span>.<span class="{{variableHighlight}}">Object</span>)
+              <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">LockedDoor</span>.<span class="{{variableHighlight}}">Unlocked</span>) {
+                <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">UnlockMessage</span> =
+                <span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">PartialMessages</span>.<span class="{{variableHighlight}}">UnlockDoor</span>  + 
+                <span class="{{variableHighlight}}">LockedDoor</span>.<span class="{{variableHighlight}}">Key</span> +
+                <span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">PartialMessages</span>.<span class="{{variableHighlight}}">Period</span>
+                <span class={{keywordHighlight}}>this</span>.<span class={{functionHighlight}}>setState</span>({<span class="{{variableHighlight}}">currentText</span>: <span class="{{variableHighlight}}">UnlockMessage</span>, <span class="{{variableHighlight}}">currentTextImage</span>: <span class={{keywordHighlight}}>null</span>})
+              }
+              <span class="{{statementHighlight}}">else</span> {
+                <span class={{keywordHighlight}}>this</span>.<span class={{functionHighlight}}>setState</span>({
+                  <span class="{{variableHighlight}}">currentText</span>: <span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">Messages</span>.<span class="{{variableHighlight}}">LockedDoor</span>, <span class="{{variableHighlight}}">currentTextImage</span>: <span class={{keywordHighlight}}>null</span>
+                })
+                <span class="{{statementHighlight}}">return</span>
+              }
+            }
+
+            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">WallMap</span> = [...<span class={{keywordHighlight}}>this</span>.<span class="{{variableHighlight}}">state</span>.<span class="{{variableHighlight}}">WallMap</span>]
+            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">MonsterMap</span> = [...<span class={{keywordHighlight}}>this</span>.<span class="{{variableHighlight}}">state</span>.<span class="{{variableHighlight}}">MonsterMap</span>]
+        
+            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">FullStateUpdate</span> = <span class={{keywordHighlight}}>true</span>
+        
+            <span class="{{commentHighlight}}">// player is attacking a monster</span>
+            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">MonsterMap</span>[<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span>][<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span>] !== <span class="{{variableHighlight}}">Empty</span>) {
+              <span class="{{variableHighlight}}">FullStateUpdate</span> = <span class={{keywordHighlight}}>false</span>
+              <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">AttackMonster</span>(<span class="{{variableHighlight}}">targetCoordinates</span>)
+              <span class="{{commentHighlight}}">// player is not moving</span>
+              <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span> = <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">x</span>
+              <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span> = <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">y</span>
+        
+            }
+            <span class="{{statementHighlight}}">else</span> {
+        
+              <span class="{{commentHighlight}}">// the player can not go there (there is a wall/door in the way)</span>
+              <span class="{{statementHighlight}}">if</span> (!<span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">DetectCollision</span>(targetCoordinates)) {
+        
+                <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">SetText</span>(Gameplay.Messages.Collision)
+                <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">PlaySound</span>(<span class="{{stringHighlight}}">"cant_go_there"</span>)
+                
+                <span class="{{statementHighlight}}">return</span>
+              }
+        
+            }
+        
+            <span class="{{commentHighlight}}">// the monsters get to move now</span>
+            <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">MoveMonsters</span>(targetCoordinates)
+        
+            <span class="{{commentHighlight}}">// wake up any monster in the vicinity of the player</span>
+            <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">WakeUpMonster</span>(targetCoordinates)
+        
+            <span class={{keywordHighlight}}>let</span> Turn = <span class={{keywordHighlight}}>this</span>.state.Turn
+            <span class={{keywordHighlight}}>let</span> DiscoveryMap = [...<span class={{keywordHighlight}}>this</span>.state.DiscoveryMap]
+            <span class={{keywordHighlight}}>let</span> currentEvent = [...<span class={{keywordHighlight}}>this</span>.state.currentEvent]
+            <span class={{keywordHighlight}}>let</span> currentText = <span class={{keywordHighlight}}>this</span>.state.currentText
+            <span class={{keywordHighlight}}>let</span> currentTextImage = <span class={{keywordHighlight}}>this</span>.state.currentTextImage
+        
+            <span class="{{commentHighlight}}">// update the state partially</span>
+            Player.Facing = Direction
+            
+            <span class="{{commentHighlight}}">// update various parts of the state</span>
+            <span class="{{statementHighlight}}">if</span> (FullStateUpdate) {
+        
+              <span class="{{commentHighlight}}">// update which parts of the map were revealed</span>
+              DiscoveryMap = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">UpdateDiscoveryMap</span>(targetCoordinates)
+        
+              <span class="{{commentHighlight}}">// add loot containers to the list of events if applicable</span>
+              currentEvent = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">CheckLootContainers</span>(targetCoordinates)
+        
+              <span class="{{commentHighlight}}">// reset messages when an event occur (loot container)</span>
+              <span class="{{statementHighlight}}">if</span> (currentEvent.length > <span class={{numberHighlight}}>0</span>) {
+                currentText = <span class="{{stringHighlight}}">""</span>
+                currentTextImage = <span class={{keywordHighlight}}>null</span>
+              }
+        
+              <span class="{{commentHighlight}}">// save the new coordinates</span>
+              Player.x = targetCoordinates.x
+              Player.y = targetCoordinates.y
+        
+              Player.Stationary = <span class={{keywordHighlight}}>false</span>
+        
+            }
+        
+            <span class="{{commentHighlight}}">// update player stats</span>
+            <span class="{{statementHighlight}}">if</span> (Player.Stamina > <span class={{numberHighlight}}>1</span>) {
+              Player.Stamina--
+            }
+            
+            <span class="{{commentHighlight}}">// add 1 turn to the game state</span>
+            Turn++  
+        
+            <span class="{{commentHighlight}}">// catch up with other state mutations</span>
+            <span class={{keywordHighlight}}>let</span> PlayerCoordinates = {x: Player.x, y: Player.y}
+            <span class="{{statementHighlight}}">if</span> (Player !== <span class={{keywordHighlight}}>this</span>.state.Player) {
+              <span class={{keywordHighlight}}>let</span> NewPlayerState = <span class={{keywordHighlight}}>this</span>.state.Player
+              <span class="{{statementHighlight}}">if</span> (NewPlayerState.Health !== Player.Health) {
+                Player.Health = NewPlayerState.Health
+                Player.Dead = NewPlayerState.Dead
+              }
+        
+              <span class="{{commentHighlight}}">// keep the coordinates</span>
+              Player.x = PlayerCoordinates.x
+              Player.y = PlayerCoordinates.y
+            }
+        
+            <span class={{keywordHighlight}}>this</span>.<span class={{functionHighlight}}>setState</span>({
+              Player: Player,
+              Turn: Turn,
+              currentEvent: currentEvent,
+              currentText: currentText,
+              currentTextImage: currentTextImage,
+              DiscoveryMap: DiscoveryMap,
+            })
+        
+            <span class="{{commentHighlight}}">// update story text</span>
+            <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">UpdateText</span>(targetCoordinates)
+            
+          }
+        </code></pre>
+
+        <div class="{{overlay}}">
+          <h4>Avid learner</h4>
+        </div>
+
+      </section>
+
+      <section id="{{french}}">
+        <a name="{{french}}"></a>
+        <h4>Pardon my French!</h4>
+      </section>
+
+      <section id="{{contact}}">
+          <a name="{{contact}}"></a>
+          <h4>Get in touch</h4>
+        </section>
+      
+    </script>
+
+    <script>
+        const template = Handlebars.compile(document.getElementById("handlebars").innerHTML);
+        const html = template({
+          assets: "assets/",
+          overlay: "overlay",
+          doom: "doom",
+          javascript: "javascript",
+          technologies: "technologies",
+          code: "code",
+          french: "french",
+          contact: "contact",
+          commentHighlight: "comment-highlight",
+          functionHighlight: "function-highlight",
+          variableHighlight: "variable-highlight",
+          keywordHighlight: "keyword-highlight",
+          statementHighlight: "statement-highlight",
+          stringHighlight: "string-highlight",
+          numberHighlight: "number-highlight",
+
+        })
+        console.log(html)
+        document.getElementById("root").innerHTML = html
+      </script>
+
+  </body>
+</html>
