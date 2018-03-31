@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "watch": "npm start",
-    "compile-sass": "sass --watch style.scss:style.css"
+    "compile:sass": "sass --watch style.scss:style.css"
   },
   "author": "Yves Gurcan",
   "devDependencies": {
