@@ -13,10 +13,11 @@
     <script id="handlebars" type="text/x-handlebars-template">
 
       <nav>
+        <a href="#{{portfolio}}">Portfolio</a>
         <a href="#{{javascript}}">JavaScript</a>
         <a href="#{{doom}}">Doom</a>
         <a href="#{{french}}">French</a>
-        <a href="#{{blog}}">Blog</a>
+        <a href="{{blog}}">Blog</a>
         <a href="#{{contact}}">Contact</a>
       </nav>
 
@@ -29,13 +30,13 @@
       </div>
 
       <div id="visual-menu">
-        <a href="#{{github}}">
+        <a href="{{github}}" target="{{external}}">
           <img alt="GitHub profile" src="{{assets}}github.png">
         </a>
-        <a href="#{{linkedin}}">
+        <a href="{{linkedin}}" target="{{external}}">
           <img alt="linkedIn profile" src="{{assets}}linkedin.png">
         </a>
-        <a href="#{{email}}">
+        <a href="mailto:{{email}}" target="{{external}}">
             <img alt="Send an email" src="{{assets}}email.png">
           </a>
       </div>
@@ -217,29 +218,35 @@
 
       </section>
 
+      <section id="{{portfolio}}">
+        <a name="{{portfolio}}"></a>
+        <h4>Portfolio</h4>
+      </section>
+
       <section id="{{french}}">
         <a name="{{french}}"></a>
         <h4>Pardon my French!</h4>
       </section>
 
       <section id="{{contact}}">
-          <a name="{{contact}}"></a>
-          <h4>Get in touch</h4>
-        </section>
+        <a name="{{contact}}"></a>
+        <h4>Get in touch</h4>
+      </section>
       
     </script>
 
     <script>
         const template = Handlebars.compile(document.getElementById("handlebars").innerHTML);
         const html = template({
-          assets: "assets/",
-          overlay: "overlay",
+          // section IDs
           doom: "doom",
           javascript: "javascript",
-          technologies: "technologies",
+            technologies: "technologies",
           code: "code",
+          portfolio: "portfolio",
           french: "french",
           contact: "contact",
+          // code snipper styling classes
           commentHighlight: "comment-highlight",
           functionHighlight: "function-highlight",
           variableHighlight: "variable-highlight",
@@ -247,7 +254,14 @@
           statementHighlight: "statement-highlight",
           stringHighlight: "string-highlight",
           numberHighlight: "number-highlight",
-
+          // other styling classes
+          overlay: "overlay",
+          // paths
+          external: "target='_blank'",
+          assets: "assets/",
+          blog: "https://blog.yvesgurcan.com",
+          github: "https://github.com/yvesgurcan",
+          linkedin: "https://www.linkedin.com/in/yvesgurcan/",
         })
         console.log(html)
         document.getElementById("root").innerHTML = html
