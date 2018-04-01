@@ -12,7 +12,14 @@
 
     <script id="handlebars" type="text/x-handlebars-template">
 
-      <nav>
+      <nav id="{{devnav}}">
+        <a href="{{devhome}}">devhome</a>
+        <a href="{{devlife}}">devlife</a>
+        <a href="{{devchoice}}">devchoice</a>
+        <a href="{{devlinks}}">devlinks</a>
+      </nav>
+
+      <nav id="{{mainnav}}">
         <a href="#{{portfolio}}">Portfolio</a>
         <a href="#{{javascript}}">JavaScript</a>
         <a href="#{{doom}}">Doom</a>
@@ -239,14 +246,13 @@
         const template = Handlebars.compile(document.getElementById("handlebars").innerHTML);
         const html = template({
           // section IDs
-          doom: "doom",
           javascript: "javascript",
             technologies: "technologies",
           code: "code",
           portfolio: "portfolio",
           french: "french",
           contact: "contact",
-          // code snipper styling classes
+          // code snippet styling classes
           commentHighlight: "comment-highlight",
           functionHighlight: "function-highlight",
           variableHighlight: "variable-highlight",
@@ -255,11 +261,16 @@
           stringHighlight: "string-highlight",
           numberHighlight: "number-highlight",
           // other styling classes
+          devnav: "devnav",
+          mainnav: "mainnav",
           overlay: "overlay",
           // paths
           external: "target='_blank'",
           assets: "assets/",
-          blog: "https://blog.yvesgurcan.com",
+          devhome: "https://www.yvesgurcan.com",
+          devlife: "https://blog.yvesgurcan.com",
+          devchoice: "https://podcast.yvesgurcan.com",
+          devlinks: "https://links.yvesgurcan.com",
           github: "https://github.com/yvesgurcan",
           linkedin: "https://www.linkedin.com/in/yvesgurcan/",
         })
