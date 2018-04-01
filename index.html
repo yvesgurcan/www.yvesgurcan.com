@@ -47,8 +47,9 @@
       </div>
 
       <div>
-        <a href="#{{contact}}">Say Hello</a>
+
         <a href="{{devlife}}">What's new?</a>
+        <a href="#{{contact}}">Say Hello</a>
       </div>
 
     </header>
@@ -199,7 +200,7 @@
           <p>Programming is a major part of my life. I thrive on solving problems with software and making ideas a reality.</p>
           <p>Throughout my career, I designed educational platforms for numerous clients. I also built solutions to help thousands of users manage their products from harvest to distribution. Additionally, I helped various causes to promote their message online.</p>
           
-          <a herd="#{{javascript}}">Read more about my skills</a>
+          <a href="#{{javascript}}">Read more about my skills</a>
           <a href="#{{portfolio}}">See my portfolio</a>
         </div>
 
@@ -219,7 +220,7 @@
             <img alt="Node" src="{{assets}}node.png">
           </div>
           <div>
-            <img alt="MongoDB" src="{{assets}}mongo.png">
+            <img alt="dynamoDB" src="{{assets}}dynamo.png">
           </div>
         </div>
         <p>Of course, my knowledge is not limited to React, JS, and HTML. I know my way around CSS grids and flexboxes, and I am comfortable with various languages such as PHP, C#, SQL, Objective-C, Python, and Perl.</p>
@@ -231,6 +232,21 @@
         <a name="{{portfolio}}"></a>
         <div class="{{overlay}}">
           <h4>Portfolio</h4>
+          <div id="{{projects}}">
+            <div class={{project}}">
+              <a href="{{kfm}}" target="{{external}}">
+              <h5>Kid Food Matters</h5>
+              <img alt="Kid Food Matters project" src="{{assets}}kfm.jpg">
+              </a>
+              <p class="{{summary}}">
+                WordPress website
+
+              </p>
+              <p class="{{details}}">
+                I created and styled this one-page site that promotes better food in Eugene's public school.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
