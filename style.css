@@ -121,6 +121,6 @@ footer {
   padding: 10px;
   text-align: center;
 
-  body {
+  body, div, section {
     scroll-behavior: smooth;
     }
