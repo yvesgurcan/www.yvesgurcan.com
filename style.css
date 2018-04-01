@@ -35,8 +35,7 @@ section {
   section .overlay {
     margin: 20px;
     padding: 20px;
-    background: white;
-    opacity: 0.8; }
+     }
   section img {
     max-width: 100%; }
   section#doom {
@@ -80,6 +79,10 @@ section {
         color: lime; }
 
 /* added */
+
+.overlay {
+  background: rgba(255,255,255,0.8);
+}
 
 .button-container {
   display: flex;
