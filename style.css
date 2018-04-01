@@ -86,6 +86,7 @@ section {
 }
 
 .button-container a, button {
+  display: block;
   background: steelblue;
   color: white;
   border-radius: 3px;
