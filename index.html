@@ -4,6 +4,8 @@
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="added.css" type="text/css"/>
+  
   </head>
   <body>
 
@@ -49,7 +51,7 @@
         </a>
       </div>
 
-      <div>
+      <div class="button-container">
 
         <a href="{{devlife}}">What's new?</a>
         <a href="#{{contact}}">Say Hello</a>
@@ -203,8 +205,12 @@
           <p>Programming is a major part of my life. I thrive on solving problems with software and making ideas a reality.</p>
           <p>Throughout my career, I designed educational platforms for numerous clients. I also built solutions to help thousands of users manage their products from harvest to distribution. Additionally, I helped various causes to promote their message online.</p>
           
-          <a href="#{{javascript}}">Read more about my skills</a>
-          <a href="#{{portfolio}}">See my portfolio</a>
+          <div class="button-container">
+          
+            <a href="#{{javascript}}">Read more about my skills</a>
+            <a href="#{{portfolio}}">See my portfolio</a>
+          
+          </div>
         </div>
 
       </section>
@@ -273,7 +279,9 @@
       </section>
       
       <footer>
-        <a href="#top">yvesgurcan.com</a>
+        <a href="#top">
+
+<span class="firstname">yves</span><span class="lastname">gurcan</span>.com</a>
       </footer>
       
     </script>
@@ -286,6 +294,8 @@
             technologies: "technologies",
           code: "code",
           portfolio: "portfolio",
+            projects: "projects",
+              project: "project",
           french: "french",
           contact: "contact",
           // code snippet styling classes
@@ -310,6 +320,8 @@
           email: "gurcan.yves@gmail.com",
           github: "https://github.com/yvesgurcan",
           linkedin: "https://www.linkedin.com/in/yvesgurcan/",
+          // projects
+          kfm: "http://kfm.com",
         })
         console.log(html)
         document.getElementById("root").innerHTML = html
