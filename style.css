@@ -110,5 +110,10 @@ form {
   position: relative;
 }
 
+section#portfolio {
+  background: lightgray;
+  }
 
-
+footer: {
+  background: black;
+}
