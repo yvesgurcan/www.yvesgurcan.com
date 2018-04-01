@@ -81,8 +81,16 @@ section {
 
 /* added */
 
+.button-container {
+  display: flex;
+}
+
 .button-container a {
   background: steelblue;
+  color: white;
+  padding: 10px:
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 
