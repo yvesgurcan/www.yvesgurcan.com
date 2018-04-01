@@ -83,7 +83,7 @@ section {
 .overlay {
   background: rgba(255,255,255,0.8);
   z-index: 2;
-  position: absolute;
+  position: relative;
 }
 
 .button-container {
@@ -107,7 +107,7 @@ form {
 
 .background {
   z-index: 1;
-  position: absolute;
+  position: relative;
 }
 
 
