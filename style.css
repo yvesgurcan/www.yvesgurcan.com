@@ -80,7 +80,7 @@ section {
 
 /* added */
 
-.overlay {
+.overlay, .project {
   background: rgba(255,255,255,0.8);
   z-index: 2;
   position: relative;
@@ -111,9 +111,12 @@ form {
 }
 
 section#portfolio {
-  background: #ddd;
+  background: #eee;
   }
+
+
 
 footer {
   background: black;
+  padding: 10px;
 }
