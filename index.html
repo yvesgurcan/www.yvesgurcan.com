@@ -234,14 +234,18 @@
       <section id="{{contact}}">
         <a name="{{contact}}"></a>
         <h4>Get in touch</h4>
+        <p>Like what you see? Use the form below or <a href="mailto:{{email}}">send me an email</a> to say hi. Let's chat over lunch or get a beer some time.</p>
+        <form>
         <label>name</label>
-        <input name="name" placeholder="your name">
+        <input name="name" placeholder="your name" required>
         <label>email</label>
-        <input type="email" name="email" placeholder="your email">
+        <input type="email" name="email" placeholder="your email" required>
         <label>subject</label>
         <input name="subject" placeholder="the subject of your message">
         <label>message</label>
-        <textarea name="message" placeholder="your message"></textarea>
+        <textarea name="message" placeholder="your message" required></textarea>
+        <button>send</button>
+        </form>
       </section>
       
     </script>
