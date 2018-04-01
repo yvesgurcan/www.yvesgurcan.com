@@ -79,4 +79,12 @@ section {
       section#code .background .number-highlight {
         color: lime; }
 
+/* added */
+
+.button-container a {
+  background: steelblue;
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
