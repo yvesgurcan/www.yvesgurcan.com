@@ -95,6 +95,11 @@ section {
   margin-right: 5px;
 }
 
+form {
+   display: flex;
+   flex-direction: row;
+ }
+
 
 
 
