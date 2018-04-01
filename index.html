@@ -14,17 +14,14 @@
 
     <script id="handlebars" type="text/x-handlebars-template">
 
-      <nav id="{{devnav}}">
-        <a href="{{devhome}}">devhome</a>
-        <a href="{{devlife}}">devlife</a>
-        <a href="{{devchoice}}">devchoice</a>
-        <a href="{{devlinks}}">devlinks</a>
-      </nav>
 
       <nav id="{{mainnav}}">
+      
         <a href="#{{javascript}}">JavaScript</a>
         <a href="#{{portfolio}}">Portfolio</a>
-        <a href="#{{french}}">French</a>
+
+        <a href="{{devlife}}">Blog</a>
+        <a href="{{resources}}">Resources</a>
         <a href="#{{contact}}">Contact</a>
       </nav>
 
@@ -260,6 +257,19 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section id="{{resources}}">
+        <a name="{{resources}}"></a>
+        <h4>Dev Resources</h4>
+        <p></p>
+        <div id="{{resList}}">
+          <div class="{{resItem}}">
+            <h5>devlinks</h5>
+            <p>This app gathers a list of links that I bookmarked to read later. Feel free to search the content.</p>
+          </div>
+        </div>
+
       </section>
 
       <section id="{{contact}}">
