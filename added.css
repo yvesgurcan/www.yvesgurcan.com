@@ -1,9 +1,10 @@
 .button-container {
-  /* display: flex; */
-  background: green;
+
+display: flex;
 }
 
 .button-container a, button {
+  display: block;
   background: steelblue !important;
   color: white;
   border: none;
