@@ -3,9 +3,9 @@
 display: flex;
 }
 
-.button-container a, button {
+a {
   display: block;
-  background: steelblue !important;
+  background: steelblue;
   color: white;
   border: none;
   margin-top: 10px;
