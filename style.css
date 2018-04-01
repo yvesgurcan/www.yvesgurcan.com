@@ -103,6 +103,9 @@ form {
    flex-direction: column;
  }
 
+.background {
+  z-index: -1;
+}
 
 
 
