@@ -3,209 +3,124 @@
   <head>
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?cxua" type="text/css"/>
-  
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
-    
-    <div id="root"></div>
-
-    <script id="handlebars" type="text/x-handlebars-template">
-
-
-      <nav id="{{mainnav}}">
-      
-        <a href="#{{javascript}}">JavaScript</a>
-        <a href="#{{portfolio}}">Portfolio</a>
-
-        <a href="{{devlife}}">Blog</a>
-        <a href="#{{resources}}">Resources</a>
-        <a href="#{{contact}}">Contact</a>
+      <nav id="mainnav">
+        <a href="#javascript">JavaScript</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="https://blog.yvesgurcan.com">Blog</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
       </nav>
 
     <header>
-
       <a name="top"></a>
 
       <div>
-        <h1><span class="firstname">yves</span><span class="lastname">gurcan</span></h1>
+        <h1>yves<span class="lastname">gurcan</span></h1>
         <h2>Full Stack Developer</h2>
         <h3>with a curious mind</h3>
       </div>
 
-      <div id="visual-menu">
-        <a href="{{github}}" target="{{external}}">
-          <img alt="GitHub profile" src="{{assets}}github.png">
+      <div id="social">
+        <a href="https://github.com/yvesgurcan" target="_blank">
+          <img alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/github.jpg">
         </a>
-        <a href="{{linkedin}}" target="{{external}}">
-          <img alt="linkedIn profile" src="{{assets}}linkedin.png">
+        <a href="https://www.linkedin.com/in/yvesgurcan/" target="_blank">
+          <img alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/linkedin.png">
         </a>
-        <a href="mailto:{{email}}" target="{{external}}">
-          <img alt="Send an email" src="{{assets}}email.png">
+        <a href="mailto:gurcan.yves@gmail.com" target="_blank">
+          <img alt="Send an email" title="Click here to send me an email" src="assets/email.png">
         </a>
       </div>
 
       <div class="button-container">
 
-        <a href="{{devlife}}">What's new?</a>
-        <a href="#{{contact}}">Say Hello</a>
+        <a href="https://blog.yvesgurcan.com">What's new?</a>
+        <a href="#contact">Say Hello</a>
       </div>
 
     </header>
 
-      <section id="{{code}}">
-        <a name="{{code}}"></a>
+      <section id="code">
+        <a name="code"></a>
         <div>
         <pre class="background"><code>
-          <span class="{{functionHighlight}}">MovePlayer</span> = (<span class="{{variableHighlight}}">Direction</span>) => {
+          <span class="function-highlight">MovePlayer</span> = (<span class="variable-highlight">Direction</span>) => {
 
-            <span class={{keywordHighlight}}>let</span> {<span class="{{variableHighlight}}">Player</span>, <span class="{{variableHighlight}}">NoClip</span>} = ...<span class={{keywordHighlight}}>this</span>.<span class="{{variableHighlight}}">state</span>
-            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">Dead</span>) <span class="{{statementHighlight}}">return</span> <span class={{keywordHighlight}}>false</span>
+            <span class=keyword-highlight>let</span> {<span class="variable-highlight">Player</span>, <span class="variable-highlight">NoClip</span>} = ...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>
+            <span class="statement-highlight">if</span> (<span class="variable-highlight">Player</span>.<span class="variable-highlight">Dead</span>) <span class="statement-highlight">return</span> <span class=keyword-highlight>false</span>
         
-            <span class="{{commentHighlight}}">// get the target coordinates</span>
-            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">targetCoordinates</span> = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">MoveObject</span>({<span class="{{variableHighlight}}">x</span>: <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">x</span>, <span class="{{variableHighlight}}">y</span>: <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">y</span>}, <span class="{{variableHighlight}}">Direction</span>)
+            <span class="comment-highlight">// get the target coordinates</span>
+            <span class=keyword-highlight>let</span> <span class="variable-highlight">targetCoordinates</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">MoveObject</span>({<span class="variable-highlight">x</span>: <span class="variable-highlight">Player</span>.<span class="variable-highlight">x</span>, <span class="variable-highlight">y</span>: <span class="variable-highlight">Player</span>.<span class="variable-highlight">y</span>}, <span class="variable-highlight">Direction</span>)
         
-            <span class="{{commentHighlight}}">// out of range</span>
-            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span> > <span class="{{variableHighlight}}">WallMap</span>.<span class="{{variableHighlight}}">length</span> - <span class={{numberHighlight}}>1</span> || <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span> < <span class={{numberHighlight}}>0</span> || <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span> > <span class="{{variableHighlight}}">WallMap</span>[<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span>].<span class="{{variableHighlight}}">length</span> - <span class={{numberHighlight}}>1</span> || <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span> < <span class={{numberHighlight}}>0</span>) {
+            <span class="comment-highlight">// out of range</span>
+            <span class="statement-highlight">if</span> (<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> > <span class="variable-highlight">WallMap</span>.<span class="variable-highlight">length</span> - <span class=number-highlight>1</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> < <span class=number-highlight>0</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> > <span class="variable-highlight">WallMap</span>[<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span>].<span class="variable-highlight">length</span> - <span class=number-highlight>1</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> < <span class=number-highlight>0</span>) {
         
-              <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">SetText</span>(<span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">Messages</span>.<span class="{{variableHighlight}}">Collision</span>)
-              <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">PlaySound</span>(<span class="{{stringHighlight}}">"cant_go_there"</span>)
+              <span class=keyword-highlight>this</span>.<span class="function-highlight">SetText</span>(<span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">Collision</span>)
+              <span class=keyword-highlight>this</span>.<span class="function-highlight">PlaySound</span>(<span class="string-highlight">"cant_go_there"</span>)
         
-              <span class="{{statementHighlight}}">return</span>
+              <span class="statement-highlight">return</span>
             }
         
-            <span class="{{commentHighlight}}">// check if there is a locked door in the way</span>
-            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">Door</span> = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">CheckLockedDoors</span>(<span class="{{variableHighlight}}">targetCoordinates</span>)
-            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">Door</span>.<span class="{{variableHighlight}}">Locked</span> && !<span class="{{variableHighlight}}">NoClip</span>) {
-              <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">LockedDoor</span> = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">UnlockDoor</span>(<span class="{{variableHighlight}}">Door</span>.<span class="{{variableHighlight}}">Object</span>)
-              <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">LockedDoor</span>.<span class="{{variableHighlight}}">Unlocked</span>) {
-                <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">UnlockMessage</span> =
-                <span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">PartialMessages</span>.<span class="{{variableHighlight}}">UnlockDoor</span>  + 
-                <span class="{{variableHighlight}}">LockedDoor</span>.<span class="{{variableHighlight}}">Key</span> +
-                <span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">PartialMessages</span>.<span class="{{variableHighlight}}">Period</span>
-                <span class={{keywordHighlight}}>this</span>.<span class={{functionHighlight}}>setState</span>({<span class="{{variableHighlight}}">currentText</span>: <span class="{{variableHighlight}}">UnlockMessage</span>, <span class="{{variableHighlight}}">currentTextImage</span>: <span class={{keywordHighlight}}>null</span>})
+            <span class="comment-highlight">// check if there is a locked door in the way</span>
+            <span class=keyword-highlight>let</span> <span class="variable-highlight">Door</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">CheckLockedDoors</span>(<span class="variable-highlight">targetCoordinates</span>)
+            <span class="statement-highlight">if</span> (<span class="variable-highlight">Door</span>.<span class="variable-highlight">Locked</span> && !<span class="variable-highlight">NoClip</span>) {
+              <span class=keyword-highlight>let</span> <span class="variable-highlight">LockedDoor</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">UnlockDoor</span>(<span class="variable-highlight">Door</span>.<span class="variable-highlight">Object</span>)
+              <span class="statement-highlight">if</span> (<span class="variable-highlight">LockedDoor</span>.<span class="variable-highlight">Unlocked</span>) {
+                <span class=keyword-highlight>let</span> <span class="variable-highlight">UnlockMessage</span> =
+                <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">PartialMessages</span>.<span class="variable-highlight">UnlockDoor</span>  + 
+                <span class="variable-highlight">LockedDoor</span>.<span class="variable-highlight">Key</span> +
+                <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">PartialMessages</span>.<span class="variable-highlight">Period</span>
+                <span class=keyword-highlight>this</span>.<span class=function-highlight>setState</span>({<span class="variable-highlight">currentText</span>: <span class="variable-highlight">UnlockMessage</span>, <span class="variable-highlight">currentTextImage</span>: <span class=keyword-highlight>null</span>})
               }
-              <span class="{{statementHighlight}}">else</span> {
-                <span class={{keywordHighlight}}>this</span>.<span class={{functionHighlight}}>setState</span>({
-                  <span class="{{variableHighlight}}">currentText</span>: <span class="{{variableHighlight}}">Gameplay</span>.<span class="{{variableHighlight}}">Messages</span>.<span class="{{variableHighlight}}">LockedDoor</span>, <span class="{{variableHighlight}}">currentTextImage</span>: <span class={{keywordHighlight}}>null</span>
+              <span class="statement-highlight">else</span> {
+                <span class=keyword-highlight>this</span>.<span class=function-highlight>setState</span>({
+                  <span class="variable-highlight">currentText</span>: <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">LockedDoor</span>, <span class="variable-highlight">currentTextImage</span>: <span class=keyword-highlight>null</span>
                 })
-                <span class="{{statementHighlight}}">return</span>
+                <span class="statement-highlight">return</span>
               }
             }
 
-            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">WallMap</span> = [...<span class={{keywordHighlight}}>this</span>.<span class="{{variableHighlight}}">state</span>.<span class="{{variableHighlight}}">WallMap</span>]
-            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">MonsterMap</span> = [...<span class={{keywordHighlight}}>this</span>.<span class="{{variableHighlight}}">state</span>.<span class="{{variableHighlight}}">MonsterMap</span>]
+            <span class=keyword-highlight>let</span> <span class="variable-highlight">WallMap</span> = [...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>.<span class="variable-highlight">WallMap</span>]
+            <span class=keyword-highlight>let</span> <span class="variable-highlight">MonsterMap</span> = [...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>.<span class="variable-highlight">MonsterMap</span>]
         
-            <span class={{keywordHighlight}}>let</span> <span class="{{variableHighlight}}">FullStateUpdate</span> = <span class={{keywordHighlight}}>true</span>
+            <span class=keyword-highlight>let</span> <span class="variable-highlight">FullStateUpdate</span> = <span class=keyword-highlight>true</span>
         
-            <span class="{{commentHighlight}}">// player is attacking a monster</span>
-            <span class="{{statementHighlight}}">if</span> (<span class="{{variableHighlight}}">MonsterMap</span>[<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span>][<span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span>] !== <span class="{{variableHighlight}}">Empty</span>) {
-              <span class="{{variableHighlight}}">FullStateUpdate</span> = <span class={{keywordHighlight}}>false</span>
-              <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">AttackMonster</span>(<span class="{{variableHighlight}}">targetCoordinates</span>)
-              <span class="{{commentHighlight}}">// player is not moving</span>
-              <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">x</span> = <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">x</span>
-              <span class="{{variableHighlight}}">targetCoordinates</span>.<span class="{{variableHighlight}}">y</span> = <span class="{{variableHighlight}}">Player</span>.<span class="{{variableHighlight}}">y</span>
+            <span class="comment-highlight">// player is attacking a monster</span>
+            <span class="statement-highlight">if</span> (<span class="variable-highlight">MonsterMap</span>[<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span>][<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span>] !== <span class="variable-highlight">Empty</span>) {
+              <span class="variable-highlight">FullStateUpdate</span> = <span class=keyword-highlight>false</span>
+              <span class=keyword-highlight>this</span>.<span class="function-highlight">AttackMonster</span>(<span class="variable-highlight">targetCoordinates</span>)
+              <span class="comment-highlight">// player is not moving</span>
+              <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> = <span class="variable-highlight">Player</span>.<span class="variable-highlight">x</span>
+              <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> = <span class="variable-highlight">Player</span>.<span class="variable-highlight">y</span>
         
             }
-            <span class="{{statementHighlight}}">else</span> {
+            <span class="statement-highlight">else</span> {
         
-              <span class="{{commentHighlight}}">// the player can not go there (there is a wall/door in the way)</span>
-              <span class="{{statementHighlight}}">if</span> (!<span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">DetectCollision</span>(targetCoordinates)) {
+              <span class="comment-highlight">// the player can not go there (there is a wall/door in the way)</span>
+              <span class="statement-highlight">if</span> (!<span class=keyword-highlight>this</span>.<span class="function-highlight">DetectCollision</span>(<span class="variable-highlight">targetCoordinates</span>)) {
         
-                <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">SetText</span>(Gameplay.Messages.Collision)
-                <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">PlaySound</span>(<span class="{{stringHighlight}}">"cant_go_there"</span>)
+                <span class=keyword-highlight>this</span>.<span class="function-highlight">SetText</span>(<span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">Collision</span>)
+                <span class=keyword-highlight>this</span>.<span class="function-highlight">PlaySound</span>(<span class="string-highlight">"cant_go_there"</span>)
                 
-                <span class="{{statementHighlight}}">return</span>
+                <span class="statement-highlight">return</span>
               }
         
             }
-        
-            <span class="{{commentHighlight}}">// the monsters get to move now</span>
-            <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">MoveMonsters</span>(targetCoordinates)
-        
-            <span class="{{commentHighlight}}">// wake up any monster in the vicinity of the player</span>
-            <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">WakeUpMonster</span>(targetCoordinates)
-        
-            <span class={{keywordHighlight}}>let</span> Turn = <span class={{keywordHighlight}}>this</span>.state.Turn
-            <span class={{keywordHighlight}}>let</span> DiscoveryMap = [...<span class={{keywordHighlight}}>this</span>.state.DiscoveryMap]
-            <span class={{keywordHighlight}}>let</span> currentEvent = [...<span class={{keywordHighlight}}>this</span>.state.currentEvent]
-            <span class={{keywordHighlight}}>let</span> currentText = <span class={{keywordHighlight}}>this</span>.state.currentText
-            <span class={{keywordHighlight}}>let</span> currentTextImage = <span class={{keywordHighlight}}>this</span>.state.currentTextImage
-        
-            <span class="{{commentHighlight}}">// update the state partially</span>
-            Player.Facing = Direction
-            
-            <span class="{{commentHighlight}}">// update various parts of the state</span>
-            <span class="{{statementHighlight}}">if</span> (FullStateUpdate) {
-        
-              <span class="{{commentHighlight}}">// update which parts of the map were revealed</span>
-              DiscoveryMap = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">UpdateDiscoveryMap</span>(targetCoordinates)
-        
-              <span class="{{commentHighlight}}">// add loot containers to the list of events if applicable</span>
-              currentEvent = <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">CheckLootContainers</span>(targetCoordinates)
-        
-              <span class="{{commentHighlight}}">// reset messages when an event occur (loot container)</span>
-              <span class="{{statementHighlight}}">if</span> (currentEvent.length > <span class={{numberHighlight}}>0</span>) {
-                currentText = <span class="{{stringHighlight}}">""</span>
-                currentTextImage = <span class={{keywordHighlight}}>null</span>
-              }
-        
-              <span class="{{commentHighlight}}">// save the new coordinates</span>
-              Player.x = targetCoordinates.x
-              Player.y = targetCoordinates.y
-        
-              Player.Stationary = <span class={{keywordHighlight}}>false</span>
-        
-            }
-        
-            <span class="{{commentHighlight}}">// update player stats</span>
-            <span class="{{statementHighlight}}">if</span> (Player.Stamina > <span class={{numberHighlight}}>1</span>) {
-              Player.Stamina--
-            }
-            
-            <span class="{{commentHighlight}}">// add 1 turn to the game state</span>
-            Turn++  
-        
-            <span class="{{commentHighlight}}">// catch up with other state mutations</span>
-            <span class={{keywordHighlight}}>let</span> PlayerCoordinates = {x: Player.x, y: Player.y}
-            <span class="{{statementHighlight}}">if</span> (Player !== <span class={{keywordHighlight}}>this</span>.state.Player) {
-              <span class={{keywordHighlight}}>let</span> NewPlayerState = <span class={{keywordHighlight}}>this</span>.state.Player
-              <span class="{{statementHighlight}}">if</span> (NewPlayerState.Health !== Player.Health) {
-                Player.Health = NewPlayerState.Health
-                Player.Dead = NewPlayerState.Dead
-              }
-        
-              <span class="{{commentHighlight}}">// keep the coordinates</span>
-              Player.x = PlayerCoordinates.x
-              Player.y = PlayerCoordinates.y
-            }
-        
-            <span class={{keywordHighlight}}>this</span>.<span class={{functionHighlight}}>setState</span>({
-              Player: Player,
-              Turn: Turn,
-              currentEvent: currentEvent,
-              currentText: currentText,
-              currentTextImage: currentTextImage,
-              DiscoveryMap: DiscoveryMap,
-            })
-        
-            <span class="{{commentHighlight}}">// update story text</span>
-            <span class={{keywordHighlight}}>this</span>.<span class="{{functionHighlight}}">UpdateText</span>(targetCoordinates)
-            
-          }
         </code></pre>
 
-        <div class="{{overlay}}">
+        <div class="overlay">
           <h4>Passionate about code</h4>
           <p>Programming is a major part of my life. I thrive on solving problems with software and making ideas a reality.</p>
           <p>Throughout my career, I designed educational platforms for numerous clients. I also built solutions to help thousands of users manage their products from harvest to distribution. Additionally, I helped various causes to promote their message online.</p>
           
           <div class="button-container">
           
-            <a href="#{{javascript}}">Read more about my skills</a>
-            <a href="#{{portfolio}}">See my portfolio</a>
+            <a href="#javascript">Read more about my skills</a>
+            <a href="#portfolio">See my portfolio</a>
           
           </div>
         </div>
@@ -213,73 +128,178 @@
 
       </section>
 
-      <section id="{{javascript}}">
-        <a name="{{javascript}}"></a>
+      <section id="javascript">
+        <a name="javascript"></a>
         <h4>JavaScript all the way</h4>
         <p>From the browser to the database, including mobile apps, JavaScript is everywhere.</p>
         <p>My expertise of this programming language allows me to be comfortable with the whole stack and maximize my skills as a programmer.</p>
         <p>My go-to stack usually includes React/Redux on the client-side and Node/Express on the backend. Thanks to AWS, I can rapidly deploy an API pointing to a lambda function and store data with dynamoDB. With GitHub Pages, I can publish my project straight from the repository almost instantly.</p>
-        <div id="{{technologies}}">
+        <div id="technologies">
           <div>
-            <img alt="React" src="{{assets}}react.png">
+            <img alt="React" title="React" src="assets/tech/react.png">
           </div>
           <div>
-            <img alt="Node" src="{{assets}}node.png">
+            <img alt="Node" title="Node" src="assets/tech/node.png">
           </div>
           <div>
-            <img alt="dynamoDB" src="{{assets}}dynamo.png">
+            <img alt="dynamoDB" title="dynamoDB" src="assets/tech/dynamodb.png">
           </div>
         </div>
-        <p>Of course, my knowledge is not limited to React, JS, and HTML. I know my way around CSS grids and flexboxes, and I am comfortable with various languages such as PHP, C#, SQL, Objective-C, Python, and Perl.</p>
-        <p>Take a look at my <a href="{{github}}" target="{{external}}">GitHub profile</a> or check out <a href="#{{portfolio}}">my portfolio</a> to read more about the projects I've been working on.</p>
       </section>
 
-
-      <section id="{{portfolio}}">
-        <a name="{{portfolio}}"></a>
-        <div class="{{overly}}">
+      <section id="portfolio">
+        <a name="portfolio"></a>
+        <div class="overly">
           <h4>Portfolio</h4>
-          <div id="{{projects}}">
-            <div class={{project}}">
-              <a href="{{kfm}}" target="{{external}}">
-                <h5>Kid Food Matters</h5>
-                <img alt="Kid Food Matters project" src="{{assets}}kfm.jpg">
-              </a>
+          <div id="projects">
+            <div class="project overlay">
               <details>
                 <summary>
-                WordPress website
-
+                  <div>
+                    <h5>STEM Familia</h5>
+                  </div>
+                  <p>Language acquisition mobile application</p>
+                  <div>
+                    <img alt="Cordova" title="Cordova" src="assets/tech/cordova.png">
+                    <img alt="React" title="React" src="assets/tech/react.png">
+                    <img alt="Node" title="Node" src="assets/tech/node.png">
+                  </div>
                 </summary>
-                <p>
-                  I created and styled this one-page site that promotes better food in Eugene's public school.
-                </p>
+                <div>
+                  <ul>I co-created the whole project, which includes:
+                    <li>A mobile app wrapped in Cordova.</li>
+                    <li>An admin website written with React/MobX, using classes (ES6), observables, and decorators (ES7).</li>
+                    <li>A Node/Express API which handles requests from the clients thanks to Objection.js, an ORM (Object-relational mapping tool) middleware.</li>
+                    <li>A PostgreSQL database.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <div class="project overlay">
+              <details>
+                <summary>
+                  <div>
+                    <img alt="Local Food Marketplace project" title="Local Food Marketplace" src="assets/projects/lfm.jpg">
+                  </div>
+                  <p></p>
+                  <div>
+                    <img alt=".NET" title=".NET" src="assets/tech/dotnet.png">
+                    <img alt="React" title="React" src="assets/tech/react.png">
+                    </div>
+                </summary>
+                <div>
+                  <ul>
+                    <li></li>
+                  </ul>
+                </div>
+              </details>
+
+            </div>
+            <div class="project overlay">
+              <details>
+                <summary>
+                  <div>
+                    <img alt="Risk Calculator project" title="Risk Calculator" src="assets/projects/riskcalculator.png" style="background: #52c29f; padding: 5px;">
+                  </div>
+                  <p>Website to track students that are at risk for dropping out of school in Oregon and Washington.</p>
+                  <div>
+                    <img alt="PHP" title="PHP" src="assets/tech/php.png">
+                    <img alt="MySQL" title="MySQL" src="assets/tech/mysql.png">
+                  </div>
+                </summary>
+                <div>
+                  <ul>I fixed bugs and added new features. The project is a Laravel/MySQL app that features Handlebars.js.
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <div class="project overlay">
+              <details>
+                <summary>
+                  <div>
+                    <h5>KinderTEK</h5>
+                    <img alt="KTEK project" title="KTEK" src="assets/projects/ktek.png">
+                  </div>
+                  <p>iOS app to help preschoolers learn important early math skills.</p>
+                  <div>
+                    <img alt="Objective-C" title="Objective-C" src="assets/tech/objectivec.png">
+                  </div>
+                </summary>
+                <div>
+                  <ul>I maintained the codebase and fixed bugs. The mobile app was written in Objective-C, backed up by a Django admin interface and API.
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <div class="project overlay">
+              <details>
+                <summary>
+                  <div>
+                    <img alt="Kid Food Matters project" title="Kid Food Matters" src="assets/projects/kfm.png">
+                  </div>
+                  <p>WordPress website that promotes better food in Eugene's public schools.</p>
+                  <div>
+                    <img alt="WordPress" title="WordPress" src="assets/tech/wordpress.png">
+                    <img alt="Sass" title="Sass" src="assets/tech/sass.png">
+                  </div>
+                </summary>
+                <div>
+                  <ul>The tools that I used to create this website includes:
+                    <li>PHP templating and WP theming with Timber/Twig.</li>
+                    <li>SASS stylesheets with grids and flexboxes (CSS3).</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <div class="project overlay">
+              <details>
+                <summary>
+                  <div>
+                    <img alt="Dirt Dojo project" title="Dirt Dojo" src="assets/projects/dirtdojo.png">
+                  </div>
+                  <a href="http://dirtdojoadventures.com" target="_blank">
+                    dirtdojoadventures.com
+                  </a>
+                  <p>WordPress website that promotes mountain biking in Oregon.</p>
+                  <div>
+                    <img alt="WordPress" title="WordPress" src="assets/tech/wordpress.png">
+                    <img alt="Timber" title="Timber" src="assets/tech/timber.png">
+                    <img alt="Twig" title="Twig" src="assets/tech/twig.svg">
+                  </div>
+                </summary>
+                <div>
+                  <ul>I created and styled the site of this B-Corp thanks to Timber/Twig and Advanced Custom Fields. Features include:
+                    <li>Newsletter sign-up form.</li>
+                    <li>Image and partner logo carousels.</li>
+                    <li>Implementation and handling of special post types and post categories.</li>
+                  </ul>
+                </div>
               </details>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="{{resources}}">
-        <a name="{{resources}}"></a>
-        <h4>Dev Resources</h4>
+      <section id="resources">
+        <a name="resources"></a>
+        <h4>Resources</h4>
         <p></p>
-        <div id="{{resList}}">
-          <div class="{{resItem}}">
-            <h5><a href="{{devlinks}}">devlinks</a></h5>
+        <div id="list">
+          <div class="item">
+            <h5><a href="https://links.yvesgurcan.com">devlinks</a></h5>
             <p>Bookmarked links to never lack interesting content to read in my spare time.</p>
           </div>
-          <div class="{{resItem}}">
-            <h5><a href="{{devchoice}}">devchoice</a></h5>
+          <div class="resItem">
+            <h5><a href="https://podcast.yvesgurcan.com">devchoice</a></h5>
             <p>A curated list of podcast episodes that are worth listening to.</p>
           </div>
         </div>
 
       </section>
 
-      <section id="{{contact}}">
-        <a name="{{contact}}"></a>
+      <section id="contact">
+        <a name="contact"></a>
         <h4>Get in touch</h4>
-        <p>Like what you see? Use the form below or <a href="mailto:{{email}}">send me an email</a> to say hi. Let's chat over lunch or get a beer some time.</p>
         <form>
         <label>name</label>
         <input name="name" placeholder="your name" required>
@@ -289,59 +309,14 @@
         <input name="subject" placeholder="the subject of your message">
         <label>message</label>
         <textarea name="message" placeholder="your message" required></textarea>
-        <button>send</button>
+        <button>Send</button>
         </form>
       </section>
       
       <footer>
         <a href="#top">
-
-<span class="firstname">yves</span><span class="lastname">gurcan</span>.com</a>
+        yves<span class="lastname">gurcan</span>.com</a>
       </footer>
-      
-    </script>
-
-    <script>
-        const template = Handlebars.compile(document.getElementById("handlebars").innerHTML);
-        const html = template({
-          // section IDs
-          javascript: "javascript",
-            technologies: "technologies",
-          code: "code",
-          portfolio: "portfolio",
-            projects: "projects",
-              project: "project",
-          resources: "resources",
-          contact: "contact",
-          // code snippet styling classes
-          commentHighlight: "comment-highlight",
-          functionHighlight: "function-highlight",
-          variableHighlight: "variable-highlight",
-          keywordHighlight: "keyword-highlight",
-          statementHighlight: "statement-highlight",
-          stringHighlight: "string-highlight",
-          numberHighlight: "number-highlight",
-          // other styling classes
-          devnav: "devnav",
-          mainnav: "mainnav",
-          background: "background",
-          overlay: "overlay",
-          // paths
-          external: "target='_blank'",
-          assets: "assets/",
-          devhome: "https://www.yvesgurcan.com",
-          devlife: "https://blog.yvesgurcan.com",
-          devchoice: "https://podcast.yvesgurcan.com",
-          devlinks: "https://links.yvesgurcan.com",
-          email: "gurcan.yves@gmail.com",
-          github: "https://github.com/yvesgurcan",
-          linkedin: "https://www.linkedin.com/in/yvesgurcan/",
-          // projects
-          kfm: "http://kfm.com",
-        })
-        console.log(html)
-        document.getElementById("root").innerHTML = html
-      </script>
 
   </body>
 </html>
