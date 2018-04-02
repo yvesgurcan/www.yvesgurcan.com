@@ -1,9 +1,68 @@
 $assets: 'assets/';
 $standard-padding: 20px;
+$small-padding: 10px;
+
+@mixin breakpoint($class) {
+
+  @if $class == small {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $class == medium {
+    @media (max-width: 900px) { @content; }
+  }
+}
+
+/* global */
+
+body {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  margin: 20px;
+}
+
+h4, h5, h6 {
+  margin: 0;
+}
 
 a {
   text-decoration: none;
 }
+
+img {
+  max-width: 100%;
+}
+
+.lastname {
+  color: gray;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container a, button {
+  display: block;
+  background: steelblue;
+  color: white;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 10px;
+
+}
+
+.button-container a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+button {
+  border: none;
+}
+
+/* local */
 
 nav {
   background: black;
@@ -34,15 +93,7 @@ header {
     margin: auto;
   }
 
-  h1 {
-  
-    .lastname {
-      color: gray;
-    }
-  
-  }
-
-  #visual-menu {
+  #social {
     display: flex;
     justify-content: center;
 
@@ -50,7 +101,7 @@ header {
       padding: 10px;
 
       img {
-        max-height: 100px;
+        max-height: 64px;
       }
 
     }
@@ -65,50 +116,20 @@ section {
   & .overlay {
     margin: $standard-padding;
     padding: $standard-padding;
-    background: white;
-    opacity: 0.8;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  &#doom {
-    background-image: url($assets + 'doom-cover.jpg');
-    background-size: cover;
-
-  }
-
-  &#javascript {
-    
-    #technologies {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-
-      div {
-        padding: 10px;
-
-        img {
-          max-width: 120px;
-          max-height: 70px;
-        }
-
-      }
-      
-    }
-
+    background: rgba(255,255,255,0.8);
+    z-index: 2;
+    position: relative;
   }
 
   &#code {
     background: #111;
-    height: 2100px;
     overflow: hidden;
 
     .background {
-      text-align: left;
       color: white;
+      text-align: left;
+      z-index: 1;
+      position: relative;
       transform: rotate(-1deg);
       user-select: none;
 
@@ -146,6 +167,151 @@ section {
         color: lime;
       }
 
+    }
+
+  }
+
+  &#javascript {
+    
+    #technologies {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        padding: 10px;
+
+        img {
+          max-width: 120px;
+          max-height: 70px;
+        }
+
+      }
+      
+    }
+
+  }
+
+  &#portfolio, &#contact {
+    background: #ddd;
+  }
+
+  &#portfolio {
+
+    #projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include breakpoint(small) {
+        display: block;
+      }
+      
+      .project {
+        margin: $small-padding;
+        flex-basis: 29%;
+        text-align: center;
+
+        @include breakpoint(medium) {
+          flex-basis: 40%;
+        }
+
+        details > div {
+          text-align: left;
+          animation: showDetails .4s ease-in-out;
+        }
+
+        @keyframes showDetails {
+          0%    {opacity: 0;}
+          100%  {opacity: 1;}
+        }
+
+        details {
+
+          summary {
+            cursor: pointer;
+            outline: none;
+            box-sizing: border-box;
+          }
+
+          summary > div:nth-of-type(2) {
+            margin-bottom: 15px;
+
+            img {
+              max-height: 48px;
+              margin-left: 2px;
+              margin-right: 2px;
+            }
+
+          }
+
+          summary::-webkit-details-marker {
+            display: none;
+          }
+
+          summary::after {
+            content: "More";
+            margin-bottom: 10px;
+            background: steelblue;
+            color: white;
+            border-radius: 3px;
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+          }
+
+        }
+
+        details[open] summary:after {
+          content: "";
+          display: none;
+        }
+
+        ul {
+          -webkit-padding-start: 0;
+    
+          li {
+            -webkit-margin-start: 20px;
+          }
+    
+        }
+
+      }
+
+    }
+
+
+
+  }
+
+  &#resources {
+
+    #list {
+      display: flex;
+
+      .item {
+        flex-basis: 50%;
+      }
+
+    }
+
+  }
+
+  &#contact {
+      background: black;
+      color: white;
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+
+      label {
+        // flex-basis: 30%;
+      }
+
+      input, textarea {
+        // flex-basis: 70%;
+      }
 
     }
 
@@ -153,3 +319,13 @@ section {
 
 }
 
+footer {
+  background: black;
+  padding: 10px;
+  text-align: center;
+
+  a {
+    color: white;
+  }
+
+}
