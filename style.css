@@ -170,6 +170,7 @@ section {
     color: white; }
     section#contact form {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap; }
 
 footer {
