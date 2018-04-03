@@ -132,6 +132,9 @@ header {
   min-height: 100vh;
   display: flex;
   flex-direction: column; }
+  @media (max-width: 900px) {
+    header {
+      min-height: auto; } }
   header div {
     margin: auto; }
     header div h1 {
