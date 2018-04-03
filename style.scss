@@ -1,6 +1,9 @@
 $assets: 'assets/';
-$standard-padding: 20px;
+$standard-padding: 70px;
 $small-padding: 10px;
+$max-width: 675px;
+$max-width2: 850px;
+$max-width3: 500px;
 
 @mixin breakpoint($class) {
 
@@ -16,14 +19,19 @@ $small-padding: 10px;
 
 body {
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 h1, h2, h3 {
   margin: 20px;
 }
 
-h4, h5, h6 {
+h1, h4, h5, h6 {
   margin: 0;
+}
+
+p {
+  font-size: 18px;
 }
 
 a {
@@ -50,6 +58,8 @@ img {
   border-radius: 3px;
   padding: 10px;
   margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
 
 }
 
@@ -65,32 +75,73 @@ button {
 /* local */
 
 nav {
-  background: black;
-  padding: 5px;
+  position: fixed;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  width: 97vw;
+  background: black;
+  margin: 0;
+  padding: 5px;
+  padding-right: 40px;
+  z-index: 999;
 
-  a {
-    color: white;
-    margin-right: 5px;
-    text-transform: uppercase;
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    margin-top: -2px;
 
-    &:hover {
-      color: red;
+    a {
+      color: white;
     }
 
   }
 
+  div {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      text-transform: uppercase;
+      color: white;
+      margin-right: 5px;
+  
+      &:hover {
+        color: red;
+      }
+  
+    }
+  
+  }
+
+
 }
 
 header {
-  min-height: 96vh;
-  text-align: center;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
+
   div {
     margin: auto;
+
+    h1 {
+      font-size: 70px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 60px;
+      white-space: pre-line;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
   }
 
   #social {
@@ -113,6 +164,15 @@ header {
 section {
   padding: $standard-padding;
 
+  h4 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 25px;
+  }
+
   & .overlay {
     margin: $standard-padding;
     padding: $standard-padding;
@@ -125,6 +185,11 @@ section {
     background: #111;
     overflow: hidden;
 
+    .overlay {
+      max-width: $max-width;
+      margin: auto;
+    }
+
     .background {
       color: white;
       text-align: left;
@@ -136,7 +201,8 @@ section {
       code {
         position: absolute;
         margin-top: -60px;
-        margin-left: -110px;
+        margin-left: -90px;
+        filter: blur(1.5px);
       }
 
       .comment-highlight {
@@ -172,6 +238,8 @@ section {
   }
 
   &#javascript {
+    max-width: $max-width2;
+    margin: auto;
     
     #technologies {
       display: flex;
@@ -285,6 +353,12 @@ section {
   }
 
   &#resources {
+    max-width: $max-width;
+    margin: auto;
+
+    h5 {
+      text-align: center;
+    }
 
     #list {
       display: flex;
@@ -298,19 +372,38 @@ section {
   }
 
   &#contact {
-      background: black;
-      color: white;
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    box-sizing: border-box;
+    background: black;
+    color: white;
 
     form {
-      display: flex;
-      flex-wrap: wrap;
+      width: $max-width3;
+      margin: auto;
+
+      label, input, textarea {
+        display: block;
+        width: 100%;
+      }
 
       label {
-        // flex-basis: 30%;
+        margin-top: 10px;
+        margin-bottom: 2px;
       }
 
       input, textarea {
-        // flex-basis: 70%;
+        padding: 5px;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      button {
+        margin-top: 20px;
       }
 
     }
@@ -323,6 +416,7 @@ footer {
   background: black;
   padding: 10px;
   text-align: center;
+  font-weight: bold;
 
   a {
     color: white;
