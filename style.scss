@@ -214,10 +214,6 @@ header {
   display: flex;
   flex-direction: column;
 
-  @include breakpoint(medium) {
-    min-height: 100vh;
-  }
-
   div {
     margin: auto;
 
