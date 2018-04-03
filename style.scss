@@ -12,7 +12,7 @@ $max-width3: 500px;
     @media (max-width: 300px) { @content; }
   }
   @else if $class == small {
-    @media (max-width: 650px) { @content; }
+    @media (max-width: 600px) { @content; }
   }
   @else if $class == medium {
     @media (max-width: 900px) { @content; }
@@ -210,9 +210,13 @@ nav#social {
 }
 
 header {
-  min-height: 101vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(medium) {
+    min-height: auto;
+  }
 
   div {
     margin: auto;
