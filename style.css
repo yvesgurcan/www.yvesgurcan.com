@@ -243,11 +243,17 @@ section {
         display: block; } }
     section#portfolio #projects .project {
       margin: 20px;
-      flex-basis: 29%;
-      text-align: center; }
+      text-align: center;
+      flex-basis: 20%; }
       @media (max-width: 900px) {
         section#portfolio #projects .project {
-          flex-basis: 40%; } }
+          flex-basis: 30%; } }
+      @media (max-width: 700px) {
+        section#portfolio #projects .project {
+          flex-basis: 100%; } }
+      @media (max-width: 500px) {
+        section#portfolio #projects .project {
+          flex-basis: 100%; } }
       section#portfolio #projects .project details > div {
         text-align: left;
         animation: showDetails .4s ease-in-out; }
@@ -307,33 +313,35 @@ section {
     box-sizing: border-box;
     background: black;
     color: white; }
-    section#contact form {
-      display: block;
+    section#contact div {
       width: 500px;
       margin: auto; }
-      @media (max-width: 500px) {
-        section#contact form {
-          width: 100%; } }
-      section#contact form label, section#contact form input, section#contact form textarea {
-        display: block;
-        box-sizing: border-box;
-        width: 100%; }
-      section#contact form label {
-        margin-top: 10px;
-        margin-bottom: 2px; }
-      section#contact form input, section#contact form textarea {
-        padding: 5px; }
-      section#contact form textarea {
-        resize: vertical;
-        min-height: 100px; }
-      section#contact form button {
-        margin-top: 20px; }
+      section#contact div form {
+        display: block; }
+        @media (max-width: 500px) {
+          section#contact div form {
+            width: 100%; } }
+        section#contact div form label, section#contact div form input, section#contact div form textarea {
+          display: block;
+          box-sizing: border-box;
+          width: 100%; }
+        section#contact div form label {
+          margin-top: 10px;
+          margin-bottom: 2px; }
+        section#contact div form input, section#contact div form textarea {
+          padding: 5px; }
+        section#contact div form textarea {
+          resize: vertical;
+          min-height: 100px; }
+        section#contact div form button {
+          margin-top: 20px; }
 
 footer {
   background: black;
   padding: 10px;
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  border-top: 1px solid gray; }
   footer a {
     color: white; }
 

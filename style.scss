@@ -14,8 +14,14 @@ $max-width3: 500px;
   @else if $class == small {
     @media (max-width: 500px) { @content; }
   }
+  @else if $class == medium2 {
+    @media (max-width: 700px) { @content; }
+  }
   @else if $class == medium {
     @media (max-width: 900px) { @content; }
+  }
+  @else if $class == large {
+    @media (max-width: 1000px) { @content; }
   }
 }
 
@@ -399,11 +405,19 @@ section {
       
       .project {
         margin: $small-padding;
-        flex-basis: 29%;
         text-align: center;
+        flex-basis: 20%;
 
         @include breakpoint(medium) {
-          flex-basis: 40%;
+          flex-basis: 30%;
+        }
+
+        @include breakpoint(medium2) {
+          flex-basis: 100%;
+        }
+
+        @include breakpoint(small) {
+          flex-basis: 100%;
         }
 
         details > div {
@@ -512,37 +526,41 @@ section {
     background: black;
     color: white;
 
-    form {
-      display: block;
+    div {
       width: $max-width3;
       margin: auto;
 
-      @include breakpoint(small) {
-        width: 100%;
-      }
-
-      label, input, textarea {
+      form {
         display: block;
-        box-sizing: border-box;
-        width: 100%;
-      }
-
-      label {
-        margin-top: 10px;
-        margin-bottom: 2px;
-      }
-
-      input, textarea {
-        padding: 5px;
-      }
-
-      textarea {
-        resize: vertical;
-        min-height: 100px;
-      }
-
-      button {
-        margin-top: 20px;
+  
+        @include breakpoint(small) {
+          width: 100%;
+        }
+  
+        label, input, textarea {
+          display: block;
+          box-sizing: border-box;
+          width: 100%;
+        }
+  
+        label {
+          margin-top: 10px;
+          margin-bottom: 2px;
+        }
+  
+        input, textarea {
+          padding: 5px;
+        }
+  
+        textarea {
+          resize: vertical;
+          min-height: 100px;
+        }
+  
+        button {
+          margin-top: 20px;
+        }
+  
       }
 
     }
@@ -556,6 +574,7 @@ footer {
   padding: 10px;
   text-align: center;
   font-weight: bold;
+  border-top: 1px solid gray;
 
   a {
     color: white;
