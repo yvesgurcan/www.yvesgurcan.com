@@ -527,15 +527,11 @@ section {
     color: white;
 
     div {
-      width: $max-width3;
       margin: auto;
 
       form {
-        display: block;
-  
-        @include breakpoint(small) {
-          width: 100%;
-        }
+        width: $max-width3;
+        max-width: 85vw;
   
         label, input, textarea {
           display: block;

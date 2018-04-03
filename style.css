@@ -314,13 +314,10 @@ section {
     background: black;
     color: white; }
     section#contact div {
-      width: 500px;
       margin: auto; }
       section#contact div form {
-        display: block; }
-        @media (max-width: 500px) {
-          section#contact div form {
-            width: 100%; } }
+        width: 500px;
+        max-width: 85vw; }
         section#contact div form label, section#contact div form input, section#contact div form textarea {
           display: block;
           box-sizing: border-box;
