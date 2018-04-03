@@ -25,7 +25,7 @@ img {
 .button-container {
   display: flex;
   justify-content: center; }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     .button-container {
       display: block;
       width: 100%; } }
@@ -40,7 +40,7 @@ img {
   padding-left: 50px;
   padding-right: 50px;
   text-align: center; }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     .button-container a, button {
       margin-top: 5px;
       padding-left: 20px;
@@ -53,17 +53,17 @@ img {
 
 button {
   border: none; }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     button {
       width: 100%; } }
 
-@media (max-width: 768px) {
+@media (max-width: 650px) {
   .desktop {
     display: none !important; } }
 
 .mobile {
   display: none !important; }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     .mobile {
       display: block !important; } }
 
@@ -81,7 +81,7 @@ nav#menu {
   margin: 0;
   padding: 5px;
   padding-right: 40px; }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     nav#menu {
       display: none; } }
   nav#menu h1 {
@@ -98,7 +98,7 @@ nav#menu {
       color: white;
       margin-right: 5px; }
       nav#menu div a:hover {
-        color: red; }
+        color: steelblue; }
 
 nav#social {
   display: flex;
@@ -106,7 +106,7 @@ nav#social {
   width: 64px;
   right: 15px;
   margin-top: 40px; }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     nav#social {
       position: static;
       right: auto;
@@ -129,7 +129,7 @@ nav#social {
         margin-left: -3px; }
 
 header {
-  min-height: 100vh;
+  min-height: 101vh;
   display: flex;
   flex-direction: column; }
   header div {
@@ -138,23 +138,23 @@ header {
       font-size: 70px;
       text-align: center;
       font-weight: bold; }
-      @media (max-width: 768px) {
+      @media (max-width: 650px) {
         header div h1 {
           font-size: 50px; } }
     header div h2 {
       font-size: 60px;
       white-space: pre-line;
       font-weight: normal; }
-      @media (max-width: 768px) {
+      @media (max-width: 650px) {
         header div h2 {
           font-size: 40px; } }
     header div h3 {
       font-size: 40px;
       font-weight: bold; }
-      @media (max-width: 768px) {
+      @media (max-width: 650px) {
         header div h3 {
           font-size: 30px; } }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     header .button-container {
       box-sizing: border-box;
       padding: 20px; } }
@@ -164,7 +164,7 @@ section {
   @media (max-width: 900px) {
     section {
       padding: 40px; } }
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     section {
       padding: 20px; } }
   section h4 {
@@ -181,7 +181,7 @@ section {
     @media (max-width: 900px) {
       section .overlay {
         padding: 40px; } }
-    @media (max-width: 768px) {
+    @media (max-width: 650px) {
       section .overlay {
         padding: 20px; } }
   section#code {
@@ -238,7 +238,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-    @media (max-width: 768px) {
+    @media (max-width: 650px) {
       section#portfolio #projects {
         display: block; } }
     section#portfolio #projects .project {
@@ -277,7 +277,7 @@ section {
         padding: 10px;
         padding-left: 50px;
         padding-right: 50px; }
-        @media (max-width: 768px) {
+        @media (max-width: 650px) {
           section#portfolio #projects .project details summary::after {
             display: block; } }
       section#portfolio #projects .project details[open] summary:after {
@@ -294,7 +294,7 @@ section {
       text-align: center; }
     section#resources #list {
       display: flex; }
-      @media (max-width: 768px) {
+      @media (max-width: 650px) {
         section#resources #list {
           display: block; } }
       section#resources #list .item {
@@ -311,7 +311,7 @@ section {
       display: block;
       width: 500px;
       margin: auto; }
-      @media (max-width: 768px) {
+      @media (max-width: 650px) {
         section#contact form {
           width: 100%; } }
       section#contact form label, section#contact form input, section#contact form textarea {
