@@ -13,6 +13,7 @@ p {
   font-size: 18px; }
 
 a {
+  color: steelblue;
   text-decoration: none; }
 
 img {
@@ -24,6 +25,10 @@ img {
 .button-container {
   display: flex;
   justify-content: center; }
+  @media (max-width: 768px) {
+    .button-container {
+      display: block;
+      width: 100%; } }
 
 .button-container a, button {
   display: block;
@@ -33,42 +38,95 @@ img {
   padding: 10px;
   margin-top: 10px;
   padding-left: 50px;
-  padding-right: 50px; }
+  padding-right: 50px;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .button-container a, button {
+      margin-top: 5px;
+      padding-left: 20px;
+      padding-right: 20px; } }
 
 .button-container a {
   margin-left: 5px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  margin-bottom: 5px; }
 
 button {
   border: none; }
+  @media (max-width: 768px) {
+    button {
+      width: 100%; } }
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none !important; } }
+
+.mobile {
+  display: none !important; }
+  @media (max-width: 768px) {
+    .mobile {
+      display: block !important; } }
 
 /* local */
 nav {
   position: fixed;
+  z-index: 999; }
+
+nav#menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 97vw;
+  width: 98vw;
   background: black;
   margin: 0;
   padding: 5px;
-  padding-right: 40px;
-  z-index: 999; }
-  nav h1 {
+  padding-right: 40px; }
+  @media (max-width: 768px) {
+    nav#menu {
+      display: none; } }
+  nav#menu h1 {
     font-size: 20px;
     margin: 0;
     margin-top: -2px; }
-    nav h1 a {
+    nav#menu h1 a {
       color: white; }
-  nav div {
+  nav#menu div {
     display: flex;
     justify-content: flex-end; }
-    nav div a {
+    nav#menu div a {
       text-transform: uppercase;
       color: white;
       margin-right: 5px; }
-      nav div a:hover {
+      nav#menu div a:hover {
         color: red; }
+
+nav#social {
+  display: flex;
+  flex-direction: row;
+  width: 64px;
+  right: 15px;
+  margin-top: 40px; }
+  @media (max-width: 768px) {
+    nav#social {
+      position: static;
+      right: auto;
+      width: auto;
+      flex-direction: column;
+      margin-top: 0;
+      margin: auto;
+      z-index: inherit; } }
+  nav#social a {
+    padding: 10px; }
+    nav#social a img {
+      max-height: 64px; }
+      nav#social a img#github {
+        border-radius: 3px;
+        max-height: 50px; }
+      nav#social a img#linkedin {
+        margin-top: 8px;
+        margin-left: 0px; }
+      nav#social a img#gmail {
+        margin-left: -3px; }
 
 header {
   min-height: 100vh;
@@ -87,27 +145,36 @@ header {
     header div h3 {
       font-size: 40px;
       font-weight: bold; }
-  header #social {
-    display: flex;
-    justify-content: center; }
-    header #social a {
-      padding: 10px; }
-      header #social a img {
-        max-height: 64px; }
+  @media (max-width: 768px) {
+    header .button-container {
+      box-sizing: border-box;
+      padding: 20px; } }
 
 section {
-  padding: 70px; }
+  padding: 80px; }
+  @media (max-width: 900px) {
+    section {
+      padding: 40px; } }
+  @media (max-width: 768px) {
+    section {
+      padding: 20px; } }
   section h4 {
     font-size: 30px;
     text-align: center; }
   section h5 {
     font-size: 25px; }
   section .overlay {
-    margin: 70px;
-    padding: 70px;
+    margin: 80px;
+    padding: 80px;
     background: rgba(255, 255, 255, 0.8);
     z-index: 2;
     position: relative; }
+    @media (max-width: 900px) {
+      section .overlay {
+        padding: 40px; } }
+    @media (max-width: 768px) {
+      section .overlay {
+        padding: 20px; } }
   section#code {
     background: #111;
     overflow: hidden; }
@@ -162,7 +229,7 @@ section {
       section#portfolio #projects {
         display: block; } }
     section#portfolio #projects .project {
-      margin: 10px;
+      margin: 20px;
       flex-basis: 29%;
       text-align: center; }
       @media (max-width: 900px) {
@@ -197,6 +264,9 @@ section {
         padding: 10px;
         padding-left: 50px;
         padding-right: 50px; }
+        @media (max-width: 768px) {
+          section#portfolio #projects .project details summary::after {
+            display: block; } }
       section#portfolio #projects .project details[open] summary:after {
         content: "";
         display: none; }
@@ -212,19 +282,25 @@ section {
     section#resources #list {
       display: flex; }
       section#resources #list .item {
-        flex-basis: 50%; }
+        flex-basis: 50%;
+        margin: 30px; }
   section#contact {
     display: flex;
     flex-direction: column;
-    height: 94vh;
+    min-height: 94vh;
     box-sizing: border-box;
     background: black;
     color: white; }
     section#contact form {
+      display: block;
       width: 500px;
       margin: auto; }
+      @media (max-width: 768px) {
+        section#contact form {
+          width: 100%; } }
       section#contact form label, section#contact form input, section#contact form textarea {
         display: block;
+        box-sizing: border-box;
         width: 100%; }
       section#contact form label {
         margin-top: 10px;

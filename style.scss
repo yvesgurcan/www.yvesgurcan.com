@@ -1,6 +1,7 @@
 $assets: 'assets/';
-$standard-padding: 70px;
-$small-padding: 10px;
+$standard-padding: 80px;
+$medium-padding: 40px;
+$small-padding: 20px;
 $max-width: 675px;
 $max-width2: 850px;
 $max-width3: 500px;
@@ -35,6 +36,7 @@ p {
 }
 
 a {
+  color: steelblue;
   text-decoration: none;
 }
 
@@ -49,6 +51,12 @@ img {
 .button-container {
   display: flex;
   justify-content: center;
+
+  @include breakpoint(small) {
+    display: block;
+    width: 100%;
+  }
+
 }
 
 .button-container a, button {
@@ -60,31 +68,69 @@ img {
   margin-top: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  text-align: center;
+
+  @include breakpoint(small) {
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 
 }
 
 .button-container a {
   margin-left: 5px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 button {
   border: none;
+
+  @include breakpoint(small) {
+    width: 100%;
+  }
+
+}
+
+.desktop {
+
+  @include breakpoint(small) {
+    display: none !important;
+  }
+
+}
+
+.mobile {
+  display: none !important;
+
+  @include breakpoint(small) {
+    display: block !important;
+  }
+
 }
 
 /* local */
 
 nav {
   position: fixed;
+  z-index: 999;
+}
+
+nav#menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 97vw;
+  width: 98vw;
   background: black;
   margin: 0;
   padding: 5px;
   padding-right: 40px;
-  z-index: 999;
+
+  @include breakpoint(small) {
+    display: none;
+  }
 
   h1 {
     font-size: 20px;
@@ -117,6 +163,49 @@ nav {
 
 }
 
+nav#social {
+  display: flex;
+  flex-direction: row;
+  width: 64px;
+  right: 15px;
+  margin-top: 40px;
+
+  @include breakpoint(small) {
+    position: static;
+    right: auto;
+    width: auto;
+    flex-direction: column;
+    margin-top: 0;
+    margin: auto;
+    z-index: inherit;
+  }
+
+  a {
+    padding: 10px;
+
+    img {
+      max-height: 64px;
+
+      &#github {
+        border-radius: 3px;
+        max-height: 50px;
+      }
+
+      &#linkedin {
+        margin-top: 8px;
+        margin-left: 0px;
+      }
+
+      &#gmail {
+        margin-left: -3px;
+      }
+
+    }
+
+  }
+
+}
+
 header {
   min-height: 100vh;
   display: flex;
@@ -144,25 +233,25 @@ header {
 
   }
 
-  #social {
-    display: flex;
-    justify-content: center;
-
-    a {
-      padding: 10px;
-
-      img {
-        max-height: 64px;
-      }
-
-    }
-
+  .button-container {
+    @include breakpoint(small) {
+      box-sizing: border-box;
+      padding: $small-padding;
+    }  
   }
 
 }
 
 section {
   padding: $standard-padding;
+
+  @include breakpoint(medium) {
+    padding: $medium-padding;
+  }
+
+  @include breakpoint(small) {
+    padding: $small-padding;
+  }
 
   h4 {
     font-size: 30px;
@@ -179,6 +268,15 @@ section {
     background: rgba(255,255,255,0.8);
     z-index: 2;
     position: relative;
+
+    @include breakpoint(medium) {
+      padding: $medium-padding;
+    }
+
+    @include breakpoint(small) {
+      padding: $small-padding;
+    }
+
   }
 
   &#code {
@@ -326,6 +424,11 @@ section {
             padding: 10px;
             padding-left: 50px;
             padding-right: 50px;
+
+            @include breakpoint(small) {
+              display: block;
+            }  
+
           }
 
         }
@@ -365,6 +468,7 @@ section {
 
       .item {
         flex-basis: 50%;
+        margin: 30px;
       }
 
     }
@@ -374,17 +478,23 @@ section {
   &#contact {
     display: flex;
     flex-direction: column;
-    height: 94vh;
+    min-height: 94vh;
     box-sizing: border-box;
     background: black;
     color: white;
 
     form {
+      display: block;
       width: $max-width3;
       margin: auto;
 
+      @include breakpoint(small) {
+        width: 100%;
+      }
+
       label, input, textarea {
         display: block;
+        box-sizing: border-box;
         width: 100%;
       }
 
