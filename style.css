@@ -223,7 +223,7 @@ section {
       display: flex;
       justify-content: center;
       align-items: center; }
-      @media (max-width: 768px) {
+      @media (max-width: 300px) {
         section#javascript #technologies {
           display: block; } }
       section#javascript #technologies div {

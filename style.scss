@@ -8,7 +8,10 @@ $max-width3: 500px;
 
 @mixin breakpoint($class) {
 
-  @if $class == small {
+  @if $class == xtrasmall {
+    @media (max-width: 300px) { @content; }
+  }
+  @else if $class == small {
     @media (max-width: 768px) { @content; }
   }
   @else if $class == medium {
@@ -360,7 +363,7 @@ section {
       justify-content: center;
       align-items: center;
 
-      @include breakpoint(small) {
+      @include breakpoint(xtrasmall) {
         display: block;
       }
 
