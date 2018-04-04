@@ -3,7 +3,8 @@
   <head>
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?abcdefghijk" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="handleContactForm.js"></script>
   </head>
   <body>
 
@@ -315,22 +316,21 @@
             <p>A curated list of podcast episodes that are worth listening to.</p>
           </div>
         </div>
-
       </section>
 
       <section id="contact">
         <a name="contact"></a>
         <div>
           <h4>Get in touch</h4>
-          <form method="post">
+          <form onSubmit="handleContactForm(event)">
             <label>name</label>
-            <input name="name" required>
+            <input name="name" required value="Name">
             <label>email</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required value="a@b.cs">
             <label>subject</label>
-            <input name="subject">
+            <input name="subject" value="Subject.">
             <label>message</label>
-            <textarea name="message" placeholder="Bonjour !" required></textarea>
+            <textarea name="message" placeholder="Bonjour !" required>The message.</textarea>
             <button>Send</button>
           </form>
         </div>
