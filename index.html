@@ -320,23 +320,26 @@
 
       <section id="contact">
         <a name="contact"></a>
-        <div>
+        <div id="contact-form">
           <h4>Get in touch</h4>
           <form onSubmit="handleContactForm(event)">
             <label>name</label>
-            <input name="name" required value="Name">
+            <input name="name" required>
             <label>email</label>
-            <input type="email" name="email" required value="a@b.cs">
+            <input type="email" name="email" required>
             <label>subject</label>
-            <input name="subject" value="Subject.">
+            <input name="subject">
             <label>message</label>
             <textarea name="message" placeholder="Bonjour !" required>The message.</textarea>
-            <label>Are you human? Please enter the characters and numbers of the image below</label>
-            <input name="captcha">
+            <label>are you human? please enter the characters and numbers on the image below</label>
+            <input name="captcha" required>
             <img id="captcha-img">
             <button>Send</button>
+            <div id="sending" style="display: none;">Please wait...</div>
+            <div id="validation"></div>
           </form>
         </div>
+        <div id="thankyou" style="display: none;">Thank you! I will get back to you very soon.</div>
       </section>
       
       <script>
