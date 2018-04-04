@@ -331,11 +331,18 @@
             <input name="subject" value="Subject.">
             <label>message</label>
             <textarea name="message" placeholder="Bonjour !" required>The message.</textarea>
+            <label>Are you human? Please enter the characters and numbers of the image below</label>
+            <input name="captcha">
+            <img id="captcha-img">
             <button>Send</button>
           </form>
         </div>
       </section>
       
+      <script>
+        pickCaptcha()
+      </script>
+
       <footer>
         <a href="#top">
         yves<span class="lastname">gurcan</span>.com</a>
