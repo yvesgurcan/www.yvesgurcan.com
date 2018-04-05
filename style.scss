@@ -1,7 +1,7 @@
 $assets: 'assets/';
 $standard-padding: 80px;
 $medium-padding: 40px;
-$small-padding: 20px;
+$small-padding: 25px;
 $max-width: 675px;
 $max-width2: 850px;
 $max-width3: 500px;
@@ -32,11 +32,7 @@ body {
   margin: 0;
 }
 
-h1, h2, h3 {
-  margin: 20px;
-}
-
-h1, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -128,6 +124,53 @@ nav {
   z-index: 999;
 }
 
+#mobile-menu:target {
+  visibility: visible;
+}
+
+nav#mobile-menu {
+  visibility: hidden;
+  width: 100vw;
+  background: black;
+  height: 100vh;
+  font-size: 20px;
+  margin-top: 31px;
+
+  #links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    #close {
+      height: 30px;
+      width: 30px;
+      margin-top: -30px;
+      margin-right: 20px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        cursor: pointer;
+        color: white;
+        padding: 12px;
+      }
+
+    }
+  
+    #link-items {
+        a {
+        display: block;
+        color: white;
+        padding: 12px;
+      }
+    } 
+
+  }
+
+}
+
 nav#menu {
   display: flex;
   justify-content: space-between;
@@ -139,16 +182,42 @@ nav#menu {
   padding-right: 40px;
 
   @include breakpoint(small) {
-    display: none;
+    z-index: 900;
   }
 
   h1 {
     font-size: 20px;
     margin: 0;
     margin-top: -2px;
+    display: flex;
 
     a {
       color: white;
+    }
+
+    #hamburger {
+      
+      display: none;
+      @include breakpoint(small) {
+        display: flex;
+      }
+
+      width: 20px;
+      margin-right: 5px;
+      margin-top: 5px;
+      flex-direction: column-reverse;
+
+      a {
+        cursor: pointer;
+      }
+
+      span {
+        display: block;
+        margin-top: 2px;
+        background: white;
+        height: 3px;
+        width: 20px;
+      }
     }
 
   }
@@ -156,6 +225,10 @@ nav#menu {
   div {
     display: flex;
     justify-content: flex-end;
+
+    @include breakpoint(small) {
+      display: none;
+    }
 
     a {
       text-transform: uppercase;
@@ -221,27 +294,32 @@ header {
   display: flex;
   flex-direction: column;
 
-  div {
+  #hero {
     margin: auto;
 
     h1 {
       font-size: 70px;
       text-align: center;
       font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 100px;
 
       @include breakpoint(small) {
-      font-size: 50px;
+        font-size: 50px;
+        margin-bottom: 20px;
       }
 
     }
 
     h2 {
       font-size: 60px;
-      white-space: pre-line;
       font-weight: normal;
+      text-align: center;
+      margin-bottom: 10px;
 
       @include breakpoint(small) {
         font-size: 40px;
+        margin-bottom: 0;
       }
 
     }
@@ -249,10 +327,12 @@ header {
     h3 {
       font-size: 40px;
       font-weight: bold;
-
+      text-align: center;
+      margin-bottom: 20px;
 
       @include breakpoint(small) {
         font-size: 30px;
+        margin-bottom: 5px;
       }
 
     }

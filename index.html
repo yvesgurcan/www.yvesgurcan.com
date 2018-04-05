@@ -3,19 +3,44 @@
   <head>
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?a" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="handleContactForm.js?a"></script>
   </head>
   <body>
 
-      <nav id="menu">
-        <h1><a href="">yves<span class="lastname">gurcan</span></a></h1>
-        <div>
-          <a href="#javascript">JavaScript</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="https://blog.yvesgurcan.com">Blog</a>
-          <a href="#resources">Resources</a>
-          <a href="#contact">Contact</a>
+    <nav id="menu">
+      <h1>
+        <div id="hamburger">
+          <a href="#mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <a href="#mobile-menu" class="mobile">yves<span class="lastname">gurcan</span></a>
+        <a href="" class="desktop">yves<span class="lastname">gurcan</span></a>
+      </h1>
+      <div>
+        <a href="#javascript">JavaScript</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="https://blog.yvesgurcan.com">Blog</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <nav id="mobile-menu" class="mobile">
+        <div id="links">
+          <div id="link-items">
+            <a href="#javascript">JavaScript</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="https://blog.yvesgurcan.com">Blog</a>
+            <a href="#resources">Resources</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div id="close">
+            <a href="#">&times;</a>
+          <div>
         </div>
       </nav>
 
@@ -33,38 +58,37 @@
         </div>
       </nav>
 
-    <header>
-      <a name="top"></a>
+      <header>
+        <a name="top"></a>
 
-      <div>
-        <h1>yves<span class="lastname">gurcan</span></h1>
-        <h2>Full
-          Stack
-          Developer
-        </h2>
-        <h3>with a curious mind</h3>
-      </div>
-
-      <nav id="social" class="mobile">
-        <div>
-          <a href="https://github.com/yvesgurcan" target="_blank">
-            <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/github.jpg">
-          </a>
-          <a href="https://www.linkedin.com/in/yvesgurcan/" target="_blank">
-            <img id="linkedin" alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/linkedin.png">
-          </a>
-          <a href="mailto:gurcan.yves@gmail.com" target="_blank">
-            <img id="gmail" alt="Send an email" title="Click here to send me an email" src="assets/email.png">
-          </a>
+        <div id="hero">
+          <h1>yves<span class="lastname">gurcan</span></h1>
+          <h2>Full
+            Stack
+            Developer
+          </h2>
+          <h3>with a curious mind</h3>
+          <div class="button-container">
+            <a href="https://blog.yvesgurcan.com">What's new?</a>
+            <a href="#contact">Say hello</a>
+          </div>
         </div>
-      </nav>
 
-      <div class="button-container">
-        <a href="https://blog.yvesgurcan.com">What's new?</a>
-        <a href="#contact">Say hello</a>
-      </div>
+        <nav id="social" class="mobile">
+          <div>
+            <a href="https://github.com/yvesgurcan" target="_blank">
+              <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/github.jpg">
+            </a>
+            <a href="https://www.linkedin.com/in/yvesgurcan/" target="_blank">
+              <img id="linkedin" alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/linkedin.png">
+            </a>
+            <a href="mailto:gurcan.yves@gmail.com" target="_blank">
+              <img id="gmail" alt="Send an email" title="Click here to send me an email" src="assets/email.png">
+            </a>
+          </div>
+        </nav>
 
-    </header>
+      </header>
 
       <section id="code">
         <a name="code"></a>
@@ -171,7 +195,7 @@
 
       <section id="portfolio">
         <a name="portfolio"></a>
-        <div class="overly">
+        <div>
           <h4>Portfolio</h4>
           <div id="projects">
             <div class="project overlay">
