@@ -3,10 +3,7 @@ body {
   scroll-behavior: smooth;
   margin: 0; }
 
-h1, h2, h3 {
-  margin: 20px; }
-
-h1, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 p {
@@ -73,6 +70,38 @@ nav {
   position: fixed;
   z-index: 999; }
 
+#mobile-menu:target {
+  visibility: visible; }
+
+nav#mobile-menu {
+  visibility: hidden;
+  width: 100vw;
+  background: black;
+  height: 100vh;
+  font-size: 20px;
+  margin-top: 31px; }
+  nav#mobile-menu #links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    nav#mobile-menu #links #close {
+      height: 30px;
+      width: 30px;
+      margin-top: -30px;
+      margin-right: 20px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      nav#mobile-menu #links #close a {
+        cursor: pointer;
+        color: white;
+        padding: 12px; }
+    nav#mobile-menu #links #link-items a {
+      display: block;
+      color: white;
+      padding: 12px; }
+
 nav#menu {
   display: flex;
   justify-content: space-between;
@@ -84,16 +113,37 @@ nav#menu {
   padding-right: 40px; }
   @media (max-width: 550px) {
     nav#menu {
-      display: none; } }
+      z-index: 900; } }
   nav#menu h1 {
     font-size: 20px;
     margin: 0;
-    margin-top: -2px; }
+    margin-top: -2px;
+    display: flex; }
     nav#menu h1 a {
       color: white; }
+    nav#menu h1 #hamburger {
+      display: none;
+      width: 20px;
+      margin-right: 5px;
+      margin-top: 5px;
+      flex-direction: column-reverse; }
+      @media (max-width: 550px) {
+        nav#menu h1 #hamburger {
+          display: flex; } }
+      nav#menu h1 #hamburger a {
+        cursor: pointer; }
+      nav#menu h1 #hamburger span {
+        display: block;
+        margin-top: 2px;
+        background: white;
+        height: 3px;
+        width: 20px; }
   nav#menu div {
     display: flex;
     justify-content: flex-end; }
+    @media (max-width: 550px) {
+      nav#menu div {
+        display: none; } }
     nav#menu div a {
       text-transform: uppercase;
       color: white;
@@ -133,31 +183,40 @@ header {
   min-height: 100vh;
   display: flex;
   flex-direction: column; }
-  header div {
+  header #hero {
     margin: auto; }
-    header div h1 {
+    header #hero h1 {
       font-size: 70px;
       text-align: center;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 100px; }
       @media (max-width: 550px) {
-        header div h1 {
-          font-size: 50px; } }
-    header div h2 {
+        header #hero h1 {
+          font-size: 50px;
+          margin-bottom: 20px; } }
+    header #hero h2 {
       font-size: 60px;
-      font-weight: normal; }
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 10px; }
       @media (max-width: 550px) {
-        header div h2 {
-          font-size: 40px; } }
-    header div h3 {
+        header #hero h2 {
+          font-size: 40px;
+          margin-bottom: 0; } }
+    header #hero h3 {
       font-size: 40px;
-      font-weight: bold; }
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px; }
       @media (max-width: 550px) {
-        header div h3 {
-          font-size: 30px; } }
+        header #hero h3 {
+          font-size: 30px;
+          margin-bottom: 5px; } }
   @media (max-width: 550px) {
     header .button-container {
       box-sizing: border-box;
-      padding: 20px; } }
+      padding: 25px; } }
 
 section {
   padding: 80px; }
@@ -166,7 +225,7 @@ section {
       padding: 40px; } }
   @media (max-width: 550px) {
     section {
-      padding: 20px; } }
+      padding: 25px; } }
   section h4 {
     font-size: 30px;
     text-align: center; }
@@ -183,7 +242,7 @@ section {
         padding: 40px; } }
     @media (max-width: 550px) {
       section .overlay {
-        padding: 20px; } }
+        padding: 25px; } }
   section#code {
     background: #111;
     overflow: hidden; }
@@ -242,12 +301,12 @@ section {
       section#portfolio #projects {
         display: block; } }
     section#portfolio #projects .project {
-      margin: 20px;
+      margin: 25px;
       text-align: center;
       flex-basis: 20%; }
       @media (max-width: 1000px) {
         section#portfolio #projects .project.overlay {
-          padding: 20px; } }
+          padding: 25px; } }
       @media (max-width: 1000px) {
         section#portfolio #projects .project {
           flex-basis: 35%; } }
