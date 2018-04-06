@@ -3,8 +3,8 @@
   <head>
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?b" type="text/css">
-    <script src="handleContactForm.js?a"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"><link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+    <script src="handleContactForm.js"></script>
   </head>
   <body>
 
@@ -17,10 +17,12 @@
             <span></span>
           </a>
         </div>
-        <a href="#mobile-menu" class="mobile">yves<span class="lastname">gurcan</span></a>
-        <a href="" class="desktop">yves<span class="lastname">gurcan</span></a>
+        <a href="#mobile-menu" class="mobile">yves<span class="suffix">gurcan</span></a>
+        <a href="" class="tablet exclude-mobile">y<span class="suffix">g</span></a>
+        <a href="" class="desktop exclude-tablet">yves<span class="suffix">gurcan</span></a>
       </h1>
       <div>
+        <a href="#code">Passionate</a>
         <a href="#javascript">JavaScript</a>
         <a href="#portfolio">Portfolio</a>
         <a href="https://blog.yvesgurcan.com">Blog</a>
@@ -32,6 +34,7 @@
     <nav id="mobile-menu" class="mobile">
         <div id="links">
           <div id="link-items">
+              <a href="#code">Passionate</a>
             <a href="#javascript">JavaScript</a>
             <a href="#portfolio">Portfolio</a>
             <a href="https://blog.yvesgurcan.com">Blog</a>
@@ -62,7 +65,7 @@
         <a name="top"></a>
 
         <div id="hero">
-          <h1>yves<span class="lastname">gurcan</span></h1>
+          <h1><a href="">yves<span class="suffix">gurcan</span></a></h1>
           <h2>Full Stack Developer</h2>
           <h3>with a curious mind</h3>
           <div class="button-container">
@@ -90,119 +93,134 @@
       <section id="code">
         <a name="code"></a>
         <div>
-        <pre class="background"><code>
-          <span class="function-highlight">MovePlayer</span> = (<span class="variable-highlight">Direction</span>) => {
+          <pre class="background"><code>
+            <span class="function-highlight">MovePlayer</span> = (<span class="variable-highlight">Direction</span>) => {
 
-            <span class=keyword-highlight>let</span> {<span class="variable-highlight">Player</span>, <span class="variable-highlight">NoClip</span>} = ...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>
-            <span class="statement-highlight">if</span> (<span class="variable-highlight">Player</span>.<span class="variable-highlight">Dead</span>) <span class="statement-highlight">return</span> <span class=keyword-highlight>false</span>
-        
-            <span class="comment-highlight">// get the target coordinates</span>
-            <span class=keyword-highlight>let</span> <span class="variable-highlight">targetCoordinates</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">MoveObject</span>({<span class="variable-highlight">x</span>: <span class="variable-highlight">Player</span>.<span class="variable-highlight">x</span>, <span class="variable-highlight">y</span>: <span class="variable-highlight">Player</span>.<span class="variable-highlight">y</span>}, <span class="variable-highlight">Direction</span>)
-        
-            <span class="comment-highlight">// out of range</span>
-            <span class="statement-highlight">if</span> (<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> > <span class="variable-highlight">WallMap</span>.<span class="variable-highlight">length</span> - <span class=number-highlight>1</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> < <span class=number-highlight>0</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> > <span class="variable-highlight">WallMap</span>[<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span>].<span class="variable-highlight">length</span> - <span class=number-highlight>1</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> < <span class=number-highlight>0</span>) {
-        
-              <span class=keyword-highlight>this</span>.<span class="function-highlight">SetText</span>(<span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">Collision</span>)
-              <span class=keyword-highlight>this</span>.<span class="function-highlight">PlaySound</span>(<span class="string-highlight">"cant_go_there"</span>)
-        
-              <span class="statement-highlight">return</span>
-            }
-        
-            <span class="comment-highlight">// check if there is a locked door in the way</span>
-            <span class=keyword-highlight>let</span> <span class="variable-highlight">Door</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">CheckLockedDoors</span>(<span class="variable-highlight">targetCoordinates</span>)
-            <span class="statement-highlight">if</span> (<span class="variable-highlight">Door</span>.<span class="variable-highlight">Locked</span> && !<span class="variable-highlight">NoClip</span>) {
-              <span class=keyword-highlight>let</span> <span class="variable-highlight">LockedDoor</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">UnlockDoor</span>(<span class="variable-highlight">Door</span>.<span class="variable-highlight">Object</span>)
-              <span class="statement-highlight">if</span> (<span class="variable-highlight">LockedDoor</span>.<span class="variable-highlight">Unlocked</span>) {
-                <span class=keyword-highlight>let</span> <span class="variable-highlight">UnlockMessage</span> =
-                <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">PartialMessages</span>.<span class="variable-highlight">UnlockDoor</span>  + 
-                <span class="variable-highlight">LockedDoor</span>.<span class="variable-highlight">Key</span> +
-                <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">PartialMessages</span>.<span class="variable-highlight">Period</span>
-                <span class=keyword-highlight>this</span>.<span class=function-highlight>setState</span>({<span class="variable-highlight">currentText</span>: <span class="variable-highlight">UnlockMessage</span>, <span class="variable-highlight">currentTextImage</span>: <span class=keyword-highlight>null</span>})
-              }
-              <span class="statement-highlight">else</span> {
-                <span class=keyword-highlight>this</span>.<span class=function-highlight>setState</span>({
-                  <span class="variable-highlight">currentText</span>: <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">LockedDoor</span>, <span class="variable-highlight">currentTextImage</span>: <span class=keyword-highlight>null</span>
-                })
-                <span class="statement-highlight">return</span>
-              }
-            }
-
-            <span class=keyword-highlight>let</span> <span class="variable-highlight">WallMap</span> = [...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>.<span class="variable-highlight">WallMap</span>]
-            <span class=keyword-highlight>let</span> <span class="variable-highlight">MonsterMap</span> = [...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>.<span class="variable-highlight">MonsterMap</span>]
-        
-            <span class=keyword-highlight>let</span> <span class="variable-highlight">FullStateUpdate</span> = <span class=keyword-highlight>true</span>
-        
-            <span class="comment-highlight">// player is attacking a monster</span>
-            <span class="statement-highlight">if</span> (<span class="variable-highlight">MonsterMap</span>[<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span>][<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span>] !== <span class="variable-highlight">Empty</span>) {
-              <span class="variable-highlight">FullStateUpdate</span> = <span class=keyword-highlight>false</span>
-              <span class=keyword-highlight>this</span>.<span class="function-highlight">AttackMonster</span>(<span class="variable-highlight">targetCoordinates</span>)
-              <span class="comment-highlight">// player is not moving</span>
-              <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> = <span class="variable-highlight">Player</span>.<span class="variable-highlight">x</span>
-              <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> = <span class="variable-highlight">Player</span>.<span class="variable-highlight">y</span>
-        
-            }
-            <span class="statement-highlight">else</span> {
-        
-              <span class="comment-highlight">// the player can not go there (there is a wall/door in the way)</span>
-              <span class="statement-highlight">if</span> (!<span class=keyword-highlight>this</span>.<span class="function-highlight">DetectCollision</span>(<span class="variable-highlight">targetCoordinates</span>)) {
-        
+              <span class=keyword-highlight>let</span> {<span class="variable-highlight">Player</span>, <span class="variable-highlight">NoClip</span>} = ...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>
+              <span class="statement-highlight">if</span> (<span class="variable-highlight">Player</span>.<span class="variable-highlight">Dead</span>) <span class="statement-highlight">return</span> <span class=keyword-highlight>false</span>
+          
+              <span class="comment-highlight">// get the target coordinates</span>
+              <span class=keyword-highlight>let</span> <span class="variable-highlight">targetCoordinates</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">MoveObject</span>({<span class="variable-highlight">x</span>: <span class="variable-highlight">Player</span>.<span class="variable-highlight">x</span>, <span class="variable-highlight">y</span>: <span class="variable-highlight">Player</span>.<span class="variable-highlight">y</span>}, <span class="variable-highlight">Direction</span>)
+          
+              <span class="comment-highlight">// out of range</span>
+              <span class="statement-highlight">if</span> (<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> > <span class="variable-highlight">WallMap</span>.<span class="variable-highlight">length</span> - <span class=number-highlight>1</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> < <span class=number-highlight>0</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> > <span class="variable-highlight">WallMap</span>[<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span>].<span class="variable-highlight">length</span> - <span class=number-highlight>1</span> || <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> < <span class=number-highlight>0</span>) {
+          
                 <span class=keyword-highlight>this</span>.<span class="function-highlight">SetText</span>(<span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">Collision</span>)
                 <span class=keyword-highlight>this</span>.<span class="function-highlight">PlaySound</span>(<span class="string-highlight">"cant_go_there"</span>)
-                
+          
                 <span class="statement-highlight">return</span>
               }
-        
-            }
-        </code></pre>
+          
+              <span class="comment-highlight">// check if there is a locked door in the way</span>
+              <span class=keyword-highlight>let</span> <span class="variable-highlight">Door</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">CheckLockedDoors</span>(<span class="variable-highlight">targetCoordinates</span>)
+              <span class="statement-highlight">if</span> (<span class="variable-highlight">Door</span>.<span class="variable-highlight">Locked</span> && !<span class="variable-highlight">NoClip</span>) {
+                <span class=keyword-highlight>let</span> <span class="variable-highlight">LockedDoor</span> = <span class=keyword-highlight>this</span>.<span class="function-highlight">UnlockDoor</span>(<span class="variable-highlight">Door</span>.<span class="variable-highlight">Object</span>)
+                <span class="statement-highlight">if</span> (<span class="variable-highlight">LockedDoor</span>.<span class="variable-highlight">Unlocked</span>) {
+                  <span class=keyword-highlight>let</span> <span class="variable-highlight">UnlockMessage</span> =
+                  <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">PartialMessages</span>.<span class="variable-highlight">UnlockDoor</span>  + 
+                  <span class="variable-highlight">LockedDoor</span>.<span class="variable-highlight">Key</span> +
+                  <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">PartialMessages</span>.<span class="variable-highlight">Period</span>
+                  <span class=keyword-highlight>this</span>.<span class=function-highlight>setState</span>({<span class="variable-highlight">currentText</span>: <span class="variable-highlight">UnlockMessage</span>, <span class="variable-highlight">currentTextImage</span>: <span class=keyword-highlight>null</span>})
+                }
+                <span class="statement-highlight">else</span> {
+                  <span class=keyword-highlight>this</span>.<span class=function-highlight>setState</span>({
+                    <span class="variable-highlight">currentText</span>: <span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">LockedDoor</span>, <span class="variable-highlight">currentTextImage</span>: <span class=keyword-highlight>null</span>
+                  })
+                  <span class="statement-highlight">return</span>
+                }
+              }
 
-        <div class="overlay">
-          <h4>Passionate about code</h4>
-          <ul>
-            <li>I design educational platforms for numerous clients.</li>
-            <li>I build solutions to help thousands of users manage their products, from harvest to distribution. </li>
-            <li>I help various causes to promote their message online.</li>
-          </ul>
+              <span class=keyword-highlight>let</span> <span class="variable-highlight">WallMap</span> = [...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>.<span class="variable-highlight">WallMap</span>]
+              <span class=keyword-highlight>let</span> <span class="variable-highlight">MonsterMap</span> = [...<span class=keyword-highlight>this</span>.<span class="variable-highlight">state</span>.<span class="variable-highlight">MonsterMap</span>]
           
-          <h4>Active participant of the local tech community</h4>
-          <ul>
-            <li><b>Hackathons.</b> I've participated to <a href="https://hackforacause.io">Hack for a cause</a> for 2 years in a row.</li>
-            <li><b>Meetups.</b> I regularly attend social and technical gatherings organized by <a href="https://www.meetup.com/EugeneTech">Eugene Tech</a> and other groups such as <a href="https://www.meetup.com/Elm-Eug">Elm Eug</a>.</li>
-            <li><b>Talks and conferences.</b> I go to discussions and workshops such as <a href="https://eugenewebdevs.com">Eugene Web Devs</a>, <a href="http://barcampeugene.org">BarCamp Eugene</a> and <a href="http://communities.techstars.com/usa/eugene/startup-weekend/">Eugene Startup Weekend</a>.</li>
-          </ul>
+              <span class=keyword-highlight>let</span> <span class="variable-highlight">FullStateUpdate</span> = <span class=keyword-highlight>true</span>
           
-          <h4>Modern tools and methodologies for quality software</h4>
-          <ul>
-            <li><b>Agile.</b> I am comfortable with the processes of iterative development.</li>
-            <li><b>Peer reviews.</b> I value my coworkers' input and use their feedback to become a better programmer.</li>
-            <li><b>Version control.</b> I am familiar with utilities such as git and the GitHub platform.</li>
-          </ul>
+              <span class="comment-highlight">// player is attacking a monster</span>
+              <span class="statement-highlight">if</span> (<span class="variable-highlight">MonsterMap</span>[<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span>][<span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span>] !== <span class="variable-highlight">Empty</span>) {
+                <span class="variable-highlight">FullStateUpdate</span> = <span class=keyword-highlight>false</span>
+                <span class=keyword-highlight>this</span>.<span class="function-highlight">AttackMonster</span>(<span class="variable-highlight">targetCoordinates</span>)
+                <span class="comment-highlight">// player is not moving</span>
+                <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">x</span> = <span class="variable-highlight">Player</span>.<span class="variable-highlight">x</span>
+                <span class="variable-highlight">targetCoordinates</span>.<span class="variable-highlight">y</span> = <span class="variable-highlight">Player</span>.<span class="variable-highlight">y</span>
           
-        </div>
+              }
+              <span class="statement-highlight">else</span> {
+          
+                <span class="comment-highlight">// the player can not go there (there is a wall/door in the way)</span>
+                <span class="statement-highlight">if</span> (!<span class=keyword-highlight>this</span>.<span class="function-highlight">DetectCollision</span>(<span class="variable-highlight">targetCoordinates</span>)) {
+          
+                  <span class=keyword-highlight>this</span>.<span class="function-highlight">SetText</span>(<span class="variable-highlight">Gameplay</span>.<span class="variable-highlight">Messages</span>.<span class="variable-highlight">Collision</span>)
+                  <span class=keyword-highlight>this</span>.<span class="function-highlight">PlaySound</span>(<span class="string-highlight">"cant_go_there"</span>)
+                  
+                  <span class="statement-highlight">return</span>
+                }
+          
+              }
+          </code></pre>
+
+          <div class="overlay">
+            <div class="row">
+              <h4><a href="#code">Passionate about code</a></h4>
+              <ul>
+                <li>I design educational platforms for numerous clients.</li>
+                <li>I build solutions to help thousands of users manage their products, from harvest to distribution. </li>
+                <li>I help various causes to promote their message online.</li>
+              </ul>
+            </div>
+            
+            <div class="row">
+              <a name="active"></a>
+              <h4><a href="#active">Active participant of the local tech community</a></h4>
+              <ul>
+                <li><b>Hackathons.</b> I've participated to <a href="https://hackforacause.io">Hack for a cause</a> for 2 years in a row.</li>
+                <li><b>Meetups.</b> I regularly attend social and technical gatherings organized by <a href="https://www.meetup.com/EugeneTech">Eugene Tech</a> and other groups such as <a href="https://www.meetup.com/Elm-Eug">Elm Eug</a>.</li>
+                <li><b>Talks and conferences.</b> I go to discussions and workshops such as <a href="https://eugenewebdevs.com">Eugene Web Devs</a> and <a href="http://communities.techstars.com/usa/eugene/startup-weekend/">Eugene Startup Weekend</a>.</li>
+              </ul>
+            </div>
+            
+            <div class="row">
+              <a name="quality"></a>
+              <h4><a href="#quality">Modern tools for quality software</a></h4>
+              <ul>
+                <li><b>Agile.</b> I am comfortable with the processes of iterative development.</li>
+                <li><b>Peer reviews.</b> I value my coworkers' input and use their feedback to become a better programmer.</li>
+                <li><b>Version control and dependencies.</b> I am familiar with utilities such as git, the GitHub platform, and npm.</li>
+              </ul>
+            </div>
+            
+          </div>
         </div>
 
       </section>
 
       <section id="javascript">
         <a name="javascript"></a>
-        <h4>JavaScript all the way</h4>
+        <h4><a href="#javascript">JavaScript all the way</a></h4>
         <p>From the browser to the database, including mobile apps, JavaScript is everywhere.</p>
         <p>My expertise of this programming language allows me to be comfortable with the whole stack and maximize my skills as a programmer.</p>
         <p>My go-to stack usually includes:</p>
         <ul>
           <li>React/Redux on the client-side.</li>
           <li>Node/Express on the backend.</li>
-          <li>AWS API Gateway and dynamoDB.</li>
+          <li>AWS API Gateway, Lambda and dynamoDB.</li>
           <li>GitHub Pages to publish my project straight from the repository almost instantly.</li>
         </ul>
         <div id="technologies">
           <div>
             <img alt="React" title="React" src="assets/tech/react.png">
+            <img alt="Redux" title="Redux" src="assets/tech/redux.png">
           </div>
           <div>
             <img alt="Node" title="Node" src="assets/tech/node.png">
+            <img alt="Express" title="Express" src="assets/tech/express.png">
           </div>
           <div>
+              <img alt="API Gateway" title="API Gateway" src="assets/tech/apigateway.png">
+              <img alt="Lambda" title="Lambda" src="assets/tech/lambda.png">
             <img alt="dynamoDB" title="dynamoDB" src="assets/tech/dynamodb.png">
+          </div>
+          <div>
+            <img alt="GitHub Pages" title="GitHub Pages" src="assets/tech/github.png">
           </div>
         </div>
       </section>
@@ -210,7 +228,7 @@
       <section id="portfolio">
         <a name="portfolio"></a>
         <div>
-          <h4>Portfolio</h4>
+          <h4><a href="#portfolio">Portfolio</a></h4>
           <div id="projects">
             <div class="project overlay">
               <details>
@@ -342,7 +360,7 @@
 
       <section id="resources">
         <a name="resources"></a>
-        <h4>Resources</h4>
+        <h4><a href="#resources">Resources</a></h4>
         <p></p>
         <div id="list">
           <div class="item">
@@ -359,7 +377,7 @@
       <section id="contact">
         <a name="contact"></a>
         <div id="contact-form">
-          <h4>Get in touch</h4>
+          <h4><a href="#contact">Get in touch</a></h4>
           <form onSubmit="handleContactForm(event)">
             <label>name</label>
             <input name="name" required>
@@ -369,7 +387,7 @@
             <input name="subject">
             <label>message</label>
             <textarea name="message" placeholder="Bonjour !" required></textarea>
-            <label>are you human? please enter the characters and numbers on the image below</label>
+            <label>please enter the characters and numbers on the image below</label>
             <input name="captcha" required>
             <img id="captcha-img">
             <button>Send</button>
@@ -386,7 +404,7 @@
 
       <footer>
         <a href="#top">
-        yves<span class="lastname">gurcan</span>.com</a>
+        yves<span class="suffix">gurcan</span>.com</a>
       </footer>
 
   </body>
