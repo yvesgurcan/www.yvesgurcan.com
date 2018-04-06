@@ -1,0 +1,345 @@
+@import "variables.scss";
+@import "default-theme.scss";
+
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+body, input, textarea, button {
+  font-family: 'Montserrat', sans-serif;
+  color: $default-color;
+  background: $default-background;
+}
+
+input, textarea {
+  border-radius: $border-radius;
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 a {
+  color: $default-color;
+}
+
+h4 a {
+  color: $default-color;
+
+  &:hover:before {
+    content: "#";
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+p, ul, button, input, textarea {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.suffix {
+  color: $highlight-color;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(small) {
+    display: block;
+    width: 100%;
+  }
+
+}
+
+.button-container a, button {
+  display: block;
+  background: $button-background;
+  color: $button-color;
+  border-radius: $border-radius;
+  padding: 10px;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+
+  @include breakpoint(small) {
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+}
+
+.button-container a {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  border: none;
+
+  @include breakpoint(small) {
+    width: 100%;
+  }
+
+}
+
+.desktop {
+
+  @include breakpoint(small) {
+    display: none !important;
+  }
+
+}
+
+.mobile {
+  display: none !important;
+
+  @include breakpoint(small) {
+    display: block !important;
+  }
+
+}
+
+.tablet {
+  display: none !important;
+
+  @include breakpoint(medium) {
+    display: block !important;
+  }
+
+}
+
+.exclude-mobile {
+  @include breakpoint(small) {
+    display: none !important;
+  }
+}
+
+.exclude-tablet {
+  @include breakpoint(medium) {
+    display: none !important;
+  }
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+}
+
+#mobile-menu:target {
+  visibility: visible;
+}
+
+nav#mobile-menu {
+  visibility: hidden;
+  width: 100vw;
+  background: $invert-background;
+  height: 100vh;
+  font-size: 20px;
+  margin-top: 31px;
+
+  #links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    #close {
+      height: 30px;
+      width: 30px;
+      margin-top: -30px;
+      margin-right: 20px;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        cursor: pointer;
+        color: $invert-color;
+        padding: 12px;
+
+        &:hover {
+          color: $link-color;
+        }
+
+      }
+
+    }
+  
+    #link-items {
+        a {
+        display: block;
+        color: $invert-color;
+        padding: 12px;
+
+        &:hover {
+          color: $link-color;
+        }
+
+      }
+    } 
+
+  }
+
+}
+
+nav#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98vw;
+  background: $invert-background;
+  margin: 0;
+  padding: 5px;
+  padding-right: 40px;
+
+  @include breakpoint(small) {
+    z-index: 900;
+  }
+
+  h1 {
+    
+    font-size: 20px;
+    margin: 0;
+    margin-top: -2px;
+    display: flex;
+
+    a {
+      color: $invert-color;
+    }
+
+    #hamburger {
+      
+      display: none;
+      @include breakpoint(small) {
+        display: flex;
+      }
+
+      width: 20px;
+      margin-right: 5px;
+      margin-top: 5px;
+      flex-direction: column-reverse;
+
+      a {
+        cursor: pointer;
+      }
+
+      span {
+        display: block;
+        margin-top: 2px;
+        background: $invert-color;
+        height: 3px;
+        width: 20px;
+      }
+    }
+
+  }
+
+  div {
+    display: flex;
+    justify-content: flex-end;
+
+    @include breakpoint(medium) {
+      padding-right: 5px;
+    }
+
+    @include breakpoint(small) {
+      display: none;
+    }
+
+    a {
+      text-transform: uppercase;
+      color: $invert-color;
+      margin-right: 7px;
+
+      @include breakpoint(medium) {
+        margin-right: 4px;
+        font-size: 94%;
+      }
+
+  
+      &:hover {
+        color: $link-color;
+      }
+  
+    }
+  
+  }
+
+
+}
+
+nav#social {
+  display: flex;
+  flex-direction: row;
+  width: 64px;
+  right: 15px;
+  margin-top: 40px;
+
+  @include breakpoint(small) {
+    position: static;
+    right: auto;
+    width: auto;
+    flex-direction: column;
+    margin-top: 0;
+    margin: auto;
+    z-index: inherit;
+  }
+
+  a {
+    padding: 10px;
+
+    img {
+      max-height: 64px;
+
+      &#github {
+        border-radius: 3px;
+        max-height: 50px;
+      }
+
+      &#linkedin {
+        margin-top: 8px;
+        margin-left: 0px;
+      }
+
+      &#gmail {
+        margin-left: -3px;
+      }
+
+    }
+
+  }
+
+}
+
+footer {
+  background: $invert-background;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-top: 1px solid gray;
+
+  a {
+    color: $invert-color;
+  }
+
+}
