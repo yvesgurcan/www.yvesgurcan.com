@@ -150,17 +150,13 @@ section {
       section#portfolio #projects .project {
         margin: 25px;
         text-align: center;
-        flex-basis: 20%; }
-        @media (max-width: 1000px) {
-          section#portfolio #projects .project.overlay {
-            padding: 25px; } }
+        flex-basis: 35%; }
+        section#portfolio #projects .project.overlay {
+          padding: 25px; }
         @media (max-width: 1000px) {
           section#portfolio #projects .project {
             flex-basis: 35%; } }
         @media (max-width: 900px) {
-          section#portfolio #projects .project {
-            flex-basis: 35%; } }
-        @media (max-width: 700px) {
           section#portfolio #projects .project {
             flex-basis: 100%; } }
         @media (max-width: 550px) {
@@ -176,10 +172,12 @@ section {
     100% {
       opacity: 1; } } }
         section#portfolio #projects .project .tech span {
+          display: inline-block;
           background: rgba(230, 230, 230, 0.8);
           color: #555;
           border-radius: 5px;
-          padding: 6px; }
+          padding: 6px;
+          margin-bottom: 2px; }
         section#portfolio #projects .project details summary {
           cursor: pointer;
           outline: none;
@@ -195,14 +193,14 @@ section {
         section#portfolio #projects .project details summary::-webkit-details-marker {
           display: none; }
         section#portfolio #projects .project details summary::after {
-          content: "More";
+          content: "Learn More";
           margin-bottom: 10px;
           background: steelblue;
           color: white;
           border-radius: 5px;
           padding: 10px;
-          padding-left: 50px;
-          padding-right: 50px; }
+          padding-left: 30px;
+          padding-right: 30px; }
           @media (max-width: 550px) {
             section#portfolio #projects .project details summary::after {
               display: block; } }
