@@ -276,6 +276,7 @@ section {
           color: #555;
           border-radius: $border-radius;
           padding: 6px;
+          margin-bottom: 2px;
         }
 
         details {
@@ -307,7 +308,7 @@ section {
           }
 
           summary::after {
-            content: "More";
+            content: "Learn More";
             margin-bottom: 10px;
             background: $button-background;
             color: $button-color;
