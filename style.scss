@@ -270,6 +270,14 @@ section {
           100%  {opacity: 1;}
         }
 
+        .tech span {
+          display: inline-block;
+          background: $overlay-background2;
+          color: #555;
+          border-radius: $border-radius;
+          padding: 6px;
+        }
+
         details {
 
           summary {

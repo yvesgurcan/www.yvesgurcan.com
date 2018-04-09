@@ -170,10 +170,16 @@ section {
           text-align: left;
           animation: showDetails .4s ease-in-out; }
 @keyframes showDetails {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+  section#portfolio #projects .project {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } } }
+        section#portfolio #projects .project .tech span {
+          background: rgba(230, 230, 230, 0.8);
+          color: #555;
+          border-radius: 5px;
+          padding: 6px; }
         section#portfolio #projects .project details summary {
           cursor: pointer;
           outline: none;
@@ -261,12 +267,13 @@ section {
         opacity: 0;
         animation: squish 2s forwards; }
 @keyframes squish {
-  0% {
-    height: auto; }
-  100% {
-    height: 0;
-    visibility: hidden;
-    display: none; } }
+  section#contact div {
+    0% {
+      height: auto; }
+    100% {
+      height: 0;
+      visibility: hidden;
+      display: none; } } }
     section#contact #thankyou {
       display: flex;
       align-items: center;
