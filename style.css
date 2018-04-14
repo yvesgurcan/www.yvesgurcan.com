@@ -63,6 +63,11 @@ section {
     @media (max-width: 550px) {
       section .overlay {
         padding: 25px; } }
+  section#about {
+    background: #111;
+    color: white; }
+    section#about h4 a {
+      color: white; }
   section#code {
     background: #111;
     overflow: hidden; }
@@ -87,6 +92,8 @@ section {
           padding-left: 20px;
           padding-right: 20px; }
     section#code .background {
+      max-width: 1100px;
+      margin: auto;
       color: white;
       text-align: left;
       z-index: 1;
@@ -94,10 +101,13 @@ section {
       transform: rotate(-1deg);
       user-select: none; }
       section#code .background code {
+        margin-left: -150px;
+        margin-top: -40px;
         position: absolute;
-        margin-top: -70px;
-        margin-left: -90px;
         filter: blur(1.5px); }
+        @media (max-width: 900px) {
+          section#code .background code {
+            margin-left: -130px; } }
       section#code .background .comment-highlight {
         color: green; }
       section#code .background .function-highlight {
@@ -166,11 +176,10 @@ section {
           text-align: left;
           animation: showDetails .4s ease-in-out; }
 @keyframes showDetails {
-  section#portfolio #projects .project {
-    0% {
-      opacity: 0; }
-    100% {
-      opacity: 1; } } }
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
         section#portfolio #projects .project .tech span {
           display: inline-block;
           background: rgba(230, 230, 230, 0.8);
@@ -265,13 +274,12 @@ section {
         opacity: 0;
         animation: squish 2s forwards; }
 @keyframes squish {
-  section#contact div {
-    0% {
-      height: auto; }
-    100% {
-      height: 0;
-      visibility: hidden;
-      display: none; } } }
+  0% {
+    height: auto; }
+  100% {
+    height: 0;
+    visibility: hidden;
+    display: none; } }
     section#contact #thankyou {
       display: flex;
       align-items: center;
