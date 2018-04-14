@@ -432,13 +432,13 @@
           <h4><a href="#contact">Get in touch</a></h4>
           <form onSubmit="handleContactForm(event)">
             <label>name</label>
-            <input name="name" required value='n'>
+            <input name="name" required>
             <label>email</label>
-            <input type="email" name="email" required value='e@b.co'>
+            <input type="email" name="email" required>
             <label>subject</label>
-            <input name="subject" value='s'>
+            <input name="subject">
             <label>message</label>
-            <textarea name="message" placeholder="Bonjour !" required>Message</textarea>
+            <textarea name="message" placeholder="Bonjour !" required></textarea>
             <label>please enter the characters and numbers on the image below</label>
             <input name="captcha" required>
             <img id="captcha-img">
