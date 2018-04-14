@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="shared.css?v1.0" type="text/css">
     <link rel="stylesheet" href="style.css?v1.0" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
-    <script src="handleContactForm.js?v1.0"></script>
+    <script src="apiKey.js?v1.1"></script>
+    <script src="handleContactForm.js?v1.1"></script>
   </head>
   <body>
 
@@ -431,13 +432,13 @@
           <h4><a href="#contact">Get in touch</a></h4>
           <form onSubmit="handleContactForm(event)">
             <label>name</label>
-            <input name="name" required>
+            <input name="name" required value='n'>
             <label>email</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required value='e@b.co'>
             <label>subject</label>
-            <input name="subject">
+            <input name="subject" value='s'>
             <label>message</label>
-            <textarea name="message" placeholder="Bonjour !" required></textarea>
+            <textarea name="message" placeholder="Bonjour !" required>Message</textarea>
             <label>please enter the characters and numbers on the image below</label>
             <input name="captcha" required>
             <img id="captcha-img">

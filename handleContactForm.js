@@ -6,6 +6,18 @@ function pickCaptcha () {
 
 function handleContactForm (event) {
   event.preventDefault()
+
+  if (!getApiKey) {
+    console.error('You must define a getApiKey() functino that returns the API key as a simple string in order to use the email functionality.')
+    return false
+  }
+
+  const apiKey = getApiKey();
+  if (!apiKey) {
+    console.warn('Mh. No API key. You\'re not going to get very far.')
+    return false
+  }
+
   const c = document.getElementsByName('captcha')[0].getAttribute('id')
   if (c === '') {
     console.warn('Are you trying to break my app?')
@@ -43,19 +55,26 @@ function handleContactForm (event) {
 
   document.getElementById('sending').style.display = 'block'
   document.getElementById('validation').style.display = 'none'
-  fetch('https://localhost:5000/', {
-      method: 'post',
-      body: {e, n, s, m, a, c},
+  fetch('https://76psli8g8k.execute-api.us-west-2.amazonaws.com/development/sendMail', {
+      method: 'POST',
+      body: JSON.stringify({e, n, s, m, a, c}),
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        'X-Api-Key': apiKey,
+      })
     })
     .then(function (response) {
       document.getElementById('sending').style.display = 'none'
       const contentType = response.headers.get("content-type")
       if (contentType && contentType.indexOf("application/json") === -1) {
-        throw ('Oops!')
+        throw ('Oops! Response Content-Type is not JSON.')
       }
       return response.json()
     })
     .then(function (response) {
+      if (response.errorMessage) {
+        throw (response.errorMessage)
+      }
       console.log('Thanks for the message!')
       document.getElementById('sending').style.display = 'none'
       document.getElementById('contact-form').classList.add("disappear");
