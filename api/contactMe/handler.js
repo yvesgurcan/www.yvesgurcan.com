@@ -75,37 +75,44 @@ ses.sendEmail(params, function(err, data) {
 
 */
 
-const recipient = ['gurcan.yves@gmail.com']
+const recipient = 'gurcan.yves@gmail.com'
 
 // The function to send SES email message
 module.exports.sendMail = (event, context, callback) => {
 
   const {
-    email,
-    name,
-    subject,
-    message,
+    a,
+    c,
+    e,
+    m,
+    n,
+    s,
   } = event.body
 
 // The parameters for sending mail using ses.sendEmail()
   let emailParams = {
     Destination: {
-      ToAddresses: recipient
+      ToAddresses: [recipient]
     },
     Message: {
       Body: {
         Text: {
-          Data: message + ";" + name,
+          Data: 
+`**This email was sent via yvesgurcan.com**
+Sender: ${n} ${e}
+
+${m}
+            `,
           Charset: 'UTF-8',
         }
       },
       Subject: {
-        Data: subject,
+        Data: `New message: ${s}`,
         Charset: 'UTF-8',
       }
     },
-    Source: email,
-    ReplyToAddresses: [email]
+    Source: recipient,
+    ReplyToAddresses: [e]
   };
 
 // the response to send back after email success.
