@@ -261,21 +261,43 @@ section {
         flex-basis: 50%;
         margin: 30px; }
   section#contact {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 94vh;
-    box-sizing: border-box;
     background: black;
     color: white;
     overflow: hidden; }
+    section#contact iframe {
+      margin-top: -50px;
+      height: 800px;
+      border: 0;
+      min-width: 500px; }
+      @media (max-width: 550px) {
+        section#contact iframe {
+          margin-left: -100px; } }
+    section#contact .container {
+      z-index: 200;
+      position: absolute;
+      width: 100%;
+      pointer-events: none; }
+    section#contact #contact-form {
+      padding-top: 80px; }
+      @media (max-width: 900px) {
+        section#contact #contact-form {
+          padding-top: 40px; } }
+      @media (max-width: 550px) {
+        section#contact #contact-form {
+          padding-top: 25px; } }
     section#contact h4 a {
-      color: white; }
+      color: white;
+      pointer-events: all; }
     section#contact div {
       margin: auto;
       transition: opacity 0.9s; }
       section#contact div form {
         width: 500px;
-        max-width: 85vw; }
+        max-width: 85vw;
+        margin: auto; }
         section#contact div form label, section#contact div form input, section#contact div form textarea {
           display: block;
           box-sizing: border-box;
@@ -284,7 +306,8 @@ section {
           margin-top: 10px;
           margin-bottom: 2px; }
         section#contact div form input, section#contact div form textarea {
-          padding: 10px; }
+          padding: 10px;
+          pointer-events: all; }
         section#contact div form textarea {
           resize: vertical;
           min-height: 100px; }
@@ -296,7 +319,8 @@ section {
           margin-top: 10px;
           color: red; }
         section#contact div form button {
-          margin-top: 10px; }
+          margin-top: 10px;
+          pointer-events: all; }
       section#contact div.disappear {
         opacity: 0;
         animation: squish 2s forwards; }

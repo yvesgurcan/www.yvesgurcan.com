@@ -103,10 +103,10 @@
           </div>
           <div>
             <p>I am a developer with <span id="years-of-professional-experience"></span> years of professional experience and <span id="years-of-personal-experience"></span> years of personal experience with web programming.</p>
-            <p>I was born and raised in France. My grandfather was a winemaker in the small village of Chardonnay, Burgundy.</p>
+            <p>I was born and raised in France. My grandfather was a winemaker in the small village of <a target="_blank" href="https://www.google.com/maps/place/71700+Chardonnay,+France/@46.5075503,0.368046,6z/data=!4m5!3m4!1s0x47f3119566838c21:0x409ce34b30eef00!8m2!3d46.509697!4d4.86257">Chardonnay</a>.</p>
             <p>I settled in 2014 with my wife Ashlee in Eugene, Oregon to be closer to her family.</p>
             <p>When I am not coding, I spend my time with my <span id="age-of-amelie"></span> daughter, Amélie.</p>
-            <p>I am fascinated by 1994 videogame Doom II.</p>
+            <p>I am fascinated by 1994 videogame <span class="ee-click">Doom II</span>.</p>
           </div>
         </div>
       </section>
@@ -445,27 +445,30 @@
       </section>
 
       <section id="contact">
+        <iframe id="map" src="https://www.google.com/maps/d/embed?mid=15jRgnMyTE2jaTPdA-wMGSGmMHvcOsgdR"></iframe>
         <a name="contact"></a>
-        <div id="contact-form">
-          <h4><a href="#contact">Get in touch</a></h4>
-          <form onSubmit="handleContactForm(event)">
-            <label>name</label>
-            <input name="name" required>
-            <label>email</label>
-            <input type="email" name="email" required>
-            <label>subject</label>
-            <input name="subject">
-            <label>message</label>
-            <textarea name="message" placeholder="Bonjour !" required></textarea>
-            <label>please enter the characters and numbers on the image below</label>
-            <input name="captcha" required>
-            <img id="captcha-img">
-            <button>Send</button>
-            <div id="sending" style="display: none;">Please wait...</div>
-            <div id="validation"></div>
-          </form>
+        <div class="container">
+          <div id="contact-form">
+            <h4><a href="#contact">Get in touch</a></h4>
+            <form onSubmit="handleContactForm(event)">
+              <label>name</label>
+              <input name="name" required>
+              <label>email</label>
+              <input type="email" name="email" required>
+              <label>subject</label>
+              <input name="subject">
+              <label>message</label>
+              <textarea name="message" placeholder="Bonjour !" required></textarea>
+              <label>please enter the characters and numbers on the image below</label>
+              <input name="captcha" required>
+              <img id="captcha-img">
+              <button>Send</button>
+              <div id="sending" style="display: none;">Please wait...</div>
+              <div id="validation"></div>
+            </form>
+          </div>
+          <div id="thankyou" style="display: none;">Thank you! I will get back to you very soon.</div>
         </div>
-        <div id="thankyou" style="display: none;">Thank you! I will get back to you very soon.</div>
       </section>
 
       <footer>

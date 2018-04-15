@@ -435,16 +435,48 @@ section {
   }
 
   &#contact {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 94vh;
-    box-sizing: border-box;
     background: $invert-background;
     color: $invert-color;
     overflow: hidden;
 
+    iframe {
+      margin-top: -50px;
+      height: 800px;
+      border: 0;
+      min-width: 500px;
+
+      @include breakpoint(small) {
+        margin-left: -100px;
+      }  
+
+    }
+
+    .container {
+      z-index: 200;
+      position: absolute;
+      width: 100%;
+      pointer-events: none;
+    }
+
+    #contact-form {
+      padding-top: $standard-padding;
+
+      @include breakpoint(medium) {
+        padding-top: $medium-padding;
+      }
+
+      @include breakpoint(small) {
+        padding-top: $small-padding;
+      }
+
+    }
+
     h4 a {
       color: $invert-color;
+      pointer-events: all;
     }
 
     div {
@@ -454,6 +486,7 @@ section {
       form {
         width: $max-width3;
         max-width: 85vw;
+        margin: auto;
   
         label, input, textarea {
           display: block;
@@ -468,6 +501,7 @@ section {
   
         input, textarea {
           padding: 10px;
+          pointer-events: all;
         }
   
         textarea {
@@ -490,6 +524,7 @@ section {
 
         button {
           margin-top: 10px;
+          pointer-events: all;
         }
   
       }
