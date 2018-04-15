@@ -6,6 +6,8 @@ The UI was written in HTML and CSS (with the help of the SASS pre-processor) and
 
 This project also contains a lambda function that handles the data from the contact form and sends emails automatically. This lambda function is integrated with other AWS services: API Gateway and Simple Email Service (SES). These services require additional configuration that is not documented below.
 
+[Backlog](https://github.com/yvesgurcan/www.yvesgurcan.com/projects)
+
 ## User Interface
 
 ### Development
