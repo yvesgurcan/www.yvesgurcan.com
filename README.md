@@ -2,7 +2,7 @@
 
 This is my personal website.
 
-The UI was written in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
+The UI was written from scratch in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
 
 This project also contains a lambda function that handles the data from the contact form and sends emails automatically. This lambda function is integrated with other AWS services: API Gateway and Simple Email Service (SES). These services require additional configuration that is not documented below.
 
