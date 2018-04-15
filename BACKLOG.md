@@ -1,4 +1,4 @@
-# backlog
+# Backlog
 
 ## UI: Re-render the Google Map in the background of the contact section when user resizes their browser window
 
