@@ -41,5 +41,3 @@ The commands related to the API should be executed in `/api/contactMe`.
 
     $ vi serverless.yml
     $ serverless deploy -v
-
-## [Backlog](BACKLOG.md)
