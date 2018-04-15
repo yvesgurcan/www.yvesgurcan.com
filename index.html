@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="shared.css?v1.0" type="text/css">
     <link rel="stylesheet" href="style.css?v1.0" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+    <script src="getDatesAndDurations.js?v1.1"></script>
     <script src="apiKey.js?v1.1"></script>
     <script src="handleContactForm.js?v1.1"></script>
   </head>
@@ -101,10 +102,10 @@
             <img src="assets/family.jpg">
           </div>
           <div>
-            <p>I am a developer with 3 years of professional experience and 15 years of personal experience with web programming.</p>
+            <p>I am a developer with <span id="years-of-professional-experience"></span> years of professional experience and <span id="years-of-personal-experience"></span> years of personal experience with web programming.</p>
             <p>I was born and raised in France. My grandfather was a winemaker in the small village of Chardonnay, Burgundy.</p>
             <p>I settled in 2014 with my wife Ashlee in Eugene, Oregon to be closer to her family.</p>
-            <p>When I am not coding, I spend my time with my 9-month-old daughter, Amélie.</p>
+            <p>When I am not coding, I spend my time with my <span id="age-of-amelie"></span> daughter, Amélie.</p>
             <p>I am fascinated by 1994 videogame Doom II.</p>
           </div>
         </div>
@@ -466,15 +467,16 @@
         </div>
         <div id="thankyou" style="display: none;">Thank you! I will get back to you very soon.</div>
       </section>
-      
-      <script>
-        pickCaptcha()
-      </script>
 
       <footer>
         <a href="#top">
         yves<span class="suffix">gurcan</span>.com</a>
       </footer>
+
+      <script>
+        pickCaptcha()
+        getDatesAndDurations()
+      </script>
 
   </body>
 </html>
