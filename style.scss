@@ -11,6 +11,7 @@ header {
     background: $overlay-background1;
     padding: $standard-padding;
     border-radius: $border-radius;
+    box-sizing: border-box;
     margin: auto;
 
     @include breakpoint(medium) {
@@ -18,7 +19,7 @@ header {
     }
 
     @include breakpoint(small) {
-      padding: $small-padding;
+      padding: 0;
     }
 
 
@@ -30,8 +31,12 @@ header {
       margin-bottom: 100px;
 
       @include breakpoint(small) {
-        font-size: 50px;
+        font-size: 45px;
         margin-bottom: 20px;
+
+        .suffix {
+          display: inline-block
+        }
       }
 
     }
@@ -67,7 +72,7 @@ header {
   .button-container {
     @include breakpoint(small) {
       box-sizing: border-box;
-      padding: $small-padding;
+      padding: 10px;
     }  
   }
 
@@ -132,16 +137,29 @@ section {
         & > div {
           padding: 25px;
           align-self: center;
+
+          @include breakpoint(small) {
+            padding: 10px;
+          }
+
         }
 
         #portrait {
           width: 300px;
+
+          @include breakpoint(small) {
+            width: 100%;
+          }
         }
 
         img {
           width: 300px;
           max-width: none;
           border-radius: $border-radius;
+
+          @include breakpoint(small) {
+            width: 100%;
+          }
         }
 
       }
@@ -393,6 +411,8 @@ section {
             padding-right: 30px;
 
             @include breakpoint(small) {
+              padding-left: 10px;
+              padding-right: 10px;
               display: block;
             }  
 
@@ -412,6 +432,10 @@ section {
             -webkit-margin-start: 20px;
           }
     
+        }
+
+        a {
+          word-break: break-all;
         }
 
       }
