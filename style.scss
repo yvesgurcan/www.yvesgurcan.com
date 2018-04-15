@@ -101,10 +101,36 @@ section {
   &#about {
 
       background: $code-background;
+      padding-bottom: 0;
       color: $invert-color;
 
       h4 a {
         color: $invert-color;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(medium) {
+          flex-direction: column;
+        }
+
+        & > div {
+          padding: 25px;
+          align-self: center;
+        }
+
+        #portrait {
+          width: 300px;
+        }
+
+        img {
+          width: 300px;
+          max-width: none;
+          border-radius: $border-radius;
+        }
+
       }
 
   }
@@ -117,7 +143,7 @@ section {
       max-width: $max-width;
       margin: auto;
 
-      .row{
+      .row {
         display: flex;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -130,16 +156,40 @@ section {
           display: block;
         }
 
-        &:nth-child(2n) {
-          flex-direction: row-reverse;
-        }
-
         h4 {
           margin: auto;
           text-align: left;
-          padding-left: 20px;
-          padding-right: 20px;
+          padding-right: 30px;
+
+          @include breakpoint(small) {
+            padding-right: 0;
+          }
+
         }
+
+        &:nth-child(2n) {
+          flex-direction: row-reverse;
+
+          h4 {
+            padding-left: 30px;
+            padding-right: 0;
+
+            @include breakpoint(small) {
+              padding-left: 0;
+            }
+
+          }
+
+        }
+
+
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+        }
+
+
 
       }
 
