@@ -5,9 +5,22 @@ header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-size: cover;
 
   #hero {
+    background: $overlay-background1;
+    padding: $standard-padding;
+    border-radius: $border-radius;
     margin: auto;
+
+    @include breakpoint(medium) {
+      padding: $medium-padding;
+    }
+
+    @include breakpoint(small) {
+      padding: $small-padding;
+    }
+
 
     h1 {
       font-size: 70px;

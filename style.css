@@ -1,9 +1,19 @@
 header {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-size: cover; }
   header #hero {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 80px;
+    border-radius: 5px;
     margin: auto; }
+    @media (max-width: 900px) {
+      header #hero {
+        padding: 40px; } }
+    @media (max-width: 550px) {
+      header #hero {
+        padding: 25px; } }
     header #hero h1 {
       font-size: 70px;
       text-align: center;
