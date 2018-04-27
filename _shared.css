@@ -217,11 +217,12 @@ nav#social {
       max-height: 64px; }
       nav#social a img#github {
         border-radius: 3px;
-        max-height: 50px;
-        margin-left: 3px; }
+        max-height: 50px; }
       nav#social a img#linkedin {
         margin-top: 8px;
-        margin-left: 3px; }
+        margin-left: 0px; }
+      nav#social a img#gmail {
+        margin-left: -3px; }
 
 footer {
   background: black;
