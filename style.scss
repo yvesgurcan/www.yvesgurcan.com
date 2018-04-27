@@ -176,8 +176,6 @@ section {
 
       .row {
         display: flex;
-        margin-top: 10px;
-        margin-bottom: 10px;
 
         @include breakpoint(medium) {
           display: block;
@@ -190,7 +188,12 @@ section {
         h4 {
           margin: auto;
           text-align: left;
-          padding-right: 30px;
+          padding-right: 20px;
+          flex-basis: 30%;
+
+          @include breakpoint(medium) {
+            padding-right: 0;
+          }
 
           @include breakpoint(small) {
             padding-right: 0;
@@ -202,8 +205,13 @@ section {
           flex-direction: row-reverse;
 
           h4 {
-            padding-left: 30px;
+            padding-left: 20px;
             padding-right: 0;
+            flex-basis: 110%;
+
+            @include breakpoint(medium) {
+              padding-left: 0;
+            }
 
             @include breakpoint(small) {
               padding-left: 0;
@@ -211,6 +219,12 @@ section {
 
           }
 
+        }
+
+        &:nth-child(3) {
+          h4 {
+            flex-basis: 70%;
+          }
         }
 
 
