@@ -1,11 +1,11 @@
 function getDurations () {
   
   const getMillisecondsSince = function (start) {
-    return Math.ceil((new Date (start, 0, 1)) - (new Date ()).getTime())
+    return (new Date (start, 0, 1)) - (new Date ()).getTime()
   }
   
   const getYearsSince = function (start) {
-    return getMillisecondsSince(start) / (1000 * 60 * 60 * 24 * 7 * 52)
+    return Math.ceil(getMillisecondsSince(start) / (1000 * 60 * 60 * 24 * 7 * 52))
   }
   
   document.getElementById("years-of-professional-experience").innerHTML = getYearsSince(2015)
