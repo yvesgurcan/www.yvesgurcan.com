@@ -1,7 +1,7 @@
 function getDurations () {
   
   const getMillisecondsSince = function (start) {
-    return (new Date (start, 0, 1)) - (new Date ()).getTime()
+    return ((new Date ()).getTime() - new Date (start, 0, 1))
   }
   
   const getYearsSince = function (start) {
