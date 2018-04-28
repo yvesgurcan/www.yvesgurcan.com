@@ -1,15 +1,15 @@
 function getDurations () {
   
   const getMillisecondsSince = function (start) {
-    return Math.ceil((new Date (start + '01/01')) - (new Date ()).getTime())
+    return Math.ceil((new Date (start, 0, 1)) - (new Date ()).getTime())
   }
   
   const getYearsSince = function (start) {
     return getMillisecondsSince(start) / (1000 * 60 * 60 * 24 * 7 * 52)
   }
   
-  document.getElementById("years-of-professional-experience").innerHTML = getYearsSince('2015')
-  document.getElementById("years-of-personal-experience").innerHTML = 15
+  document.getElementById("years-of-professional-experience").innerHTML = getYearsSince(2015)
+  document.getElementById("years-of-personal-experience").innerHTML = getYearsSince(2003)
   document.getElementById("age-of-amelie").innerHTML = '9-month-old'
 }
 
