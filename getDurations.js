@@ -1,4 +1,4 @@
-function getDatesAndDurations () {
+function getDurations () {
   
   const getMillisecondsSince = function (start) {
     return Math.ceil((new Date ()).getTime() - (new Date (start + '01/01')))
