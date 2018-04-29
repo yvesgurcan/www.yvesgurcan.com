@@ -8,7 +8,7 @@ function getDurations () {
     return round * Math.floor(1/round * Math.floor(getMillisecondsSince(year) / (1000 * 60 * 60 * 24 * 7 * 52)))
   }
   
-  const getMonthsSince(year, month) {
+  const getMonthsSince = function (year, month) {
     return Math.floor(getMillisecondsSince(year, month) / (1000 * 60 * 60 * 24 * 30))
   }
   
