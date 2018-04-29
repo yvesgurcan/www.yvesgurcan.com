@@ -9,7 +9,7 @@ function getDurations () {
   }
   
   document.getElementById("years-of-professional-experience").innerHTML = getYearsSince(2015)
-  document.getElementById("years-of-personal-experience").innerHTML = getYearsSince(2003, 5)
+  document.getElementById("years-of-personal-experience").innerHTML = getYearsSince(2000, 5)
   document.getElementById("age-of-amelie").innerHTML = '9-month-old'
 }
 
