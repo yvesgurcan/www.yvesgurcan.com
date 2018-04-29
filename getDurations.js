@@ -4,12 +4,12 @@ function getDurations () {
     return ((new Date ()).getTime() - new Date (start, 0, 1))
   }
   
-  const getYearsSince = function (start) {
-    return Math.floor(getMillisecondsSince(start) / (1000 * 60 * 60 * 24 * 7 * 52))
+  const getYearsSince = function (start, round) {
+    return 1/round * Math.floor(round * Math.floor(getMillisecondsSince(start) / (1000 * 60 * 60 * 24 * 7 * 52)))
   }
   
   document.getElementById("years-of-professional-experience").innerHTML = getYearsSince(2015)
-  document.getElementById("years-of-personal-experience").innerHTML = getYearsSince(2003)
+  document.getElementById("years-of-personal-experience").innerHTML = getYearsSince(2003, 5)
   document.getElementById("age-of-amelie").innerHTML = '9-month-old'
 }
 
