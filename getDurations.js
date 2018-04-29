@@ -9,7 +9,7 @@ function getDurations () {
   }
   
   const getMonthsSince = function (year, month) {
-    return Math.floor(getMillisecondsSince(year, month) / (1000 * 60 * 60 * 24 * 30))
+    return Math.floor(getMillisecondsSince(year, month) / (1000 * 60 * 60 * 24 * 31))
   }
   
   const getAmeliesAge = function () {
