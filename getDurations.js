@@ -4,7 +4,7 @@ function getDurations () {
     return ((new Date ()).getTime() - new Date (start, 0, 1))
   }
   
-  const getYearsSince = function (start, round) {
+  const getYearsSince = function (start, round=1) {
     return 1/round * Math.floor(round * Math.floor(getMillisecondsSince(start) / (1000 * 60 * 60 * 24 * 7 * 52)))
   }
   
