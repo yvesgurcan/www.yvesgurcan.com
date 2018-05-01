@@ -13,7 +13,7 @@ function getDurations () {
   }
   
   const getAmeliesAge = function () {
-    const months = getMonthsSince(2017, 5)
+    const months = getMonthsSince(2017, 6)
     return months < 12 ? `${months}-month-old` : `${getYearsSince(2017)}-year-old`
   }
   
