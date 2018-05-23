@@ -1,7 +1,6 @@
 node_modules
 .sass-cache
 .DS_Store
-apiKey.js
 config.json
 
 # package directories

@@ -3,9 +3,10 @@
   <head>
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shared.css?v1.0" type="text/css">
-    <link rel="stylesheet" href="style.css?v1.0" type="text/css">
+    <link rel="stylesheet" href="shared.css?v1.1" type="text/css">
+    <link rel="stylesheet" href="style.css?v1.1" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+    <script src="getDurations.js?v2.1"></script>
     <script src="apiKey.js?v1.1"></script>
     <script src="handleContactForm.js?v1.1"></script>
   </head>
@@ -25,11 +26,12 @@
         <a href="" class="desktop exclude-tablet">yves<span class="suffix">gurcan</span></a>
       </h1>
       <div>
-        <a href="#code">Passionate</a>
+        <a href="#about">About</a>
         <a href="#javascript">JavaScript</a>
         <a href="#portfolio">Portfolio</a>
         <a href="https://blog.yvesgurcan.com">Blog</a>
         <a href="https://links.yvesgurcan.com">Links</a>
+        <a href="https://devchoice.yvesgurcan.com">Podcasts</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -37,11 +39,12 @@
     <nav id="mobile-menu" class="mobile">
         <div id="links">
           <div id="link-items">
-              <a href="#code">Passionate</a>
+            <a href="#about">About</a>
             <a href="#javascript">JavaScript</a>
             <a href="#portfolio">Portfolio</a>
             <a href="https://blog.yvesgurcan.com">Blog</a>
             <a href="https://links.yvesgurcan.com">Links</a>
+            <a href="https://devchoice.yvesgurcan.com">Podcasts</a>
             <a href="#contact">Contact</a>
           </div>
           <div id="close">
@@ -53,13 +56,16 @@
       <nav id="social" class="desktop">
         <div>
           <a href="https://github.com/yvesgurcan" target="_blank">
-            <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/github.jpg">
+            <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/social/github.jpg">
           </a>
           <a href="https://www.linkedin.com/in/yvesgurcan/" target="_blank">
-            <img id="linkedin" alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/linkedin.png">
+            <img id="linkedin" alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/social/linkedin.png">
           </a>
           <a href="mailto:gurcan.yves@gmail.com" target="_blank">
-            <img id="gmail" alt="Send an email" title="Click here to send me an email" src="assets/email.png">
+            <img id="gmail" alt="Send an email" title="Click here to send me an email" src="assets/social/email.png">
+          </a>
+          <a href="https://twitter.com/yvesgurcan" target="_blank">
+            <img id="twitter" alt="Twitter page" title="Click here to go to my Twitter page" src="assets/social/twitter.png">
           </a>
         </div>
       </nav>
@@ -80,13 +86,16 @@
         <nav id="social" class="mobile">
           <div>
             <a href="https://github.com/yvesgurcan" target="_blank">
-              <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/github.jpg">
+              <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/social/github.jpg">
             </a>
             <a href="https://www.linkedin.com/in/yvesgurcan/" target="_blank">
-              <img id="linkedin" alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/linkedin.png">
+              <img id="linkedin" alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/social/linkedin.png">
             </a>
             <a href="mailto:gurcan.yves@gmail.com" target="_blank">
-              <img id="gmail" alt="Send an email" title="Click here to send me an email" src="assets/email.png">
+              <img id="gmail" alt="Send an email" title="Click here to send me an email" src="assets/social/email.png">
+            </a>
+            <a href="https://twitter.com/yvesgurcan" target="_blank">
+              <img id="twitter" alt="Twitter page" title="Click here to go to my Twitter page" src="assets/social/twitter.png">
             </a>
           </div>
         </nav>
@@ -96,7 +105,17 @@
       <section id="about">
         <a name="about"></a>
         <h4><a href="#about">Who's this guy?</a></h4>
-        <p></p>
+        <div class="content">
+          <div id="portrait">
+            <img src="assets/family.jpg">
+          </div>
+          <div>
+            <p>I am a developer with <span id="years-of-professional-experience"></span> years of professional experience and <span id="years-of-personal-experience"></span> years of personal experience with web programming.</p>
+            <p>I was born and raised in France. In 2014, I settled in Eugene, Oregon with my wife Ashlee.</p>
+            <p>When I am not coding, I spend my time with my <span id="age-of-amelie"></span> daughter, Amélie.</p>
+            <p>I am fascinated by <span onClick="ee()">1994</span> videogame <a href="http://blog.yvesgurcan.com/2018/04/27/doom.html">Doom II</a></span>.</p>
+          </div>
+        </div>
       </section>
 
       <section id="code">
@@ -171,9 +190,9 @@
             <div class="row">
               <h4><a href="#code">Passionate about code</a></h4>
               <ul>
-                <li>I design educational platforms for numerous clients.</li>
-                <li>I build solutions adopted by thousands of users.</li>
-                <li>I help causes to promote their message online.</li>
+                <li><b>Problem solver.</b> I find creative ways to fulfill needs and I don't give up easily.</li>
+                <li><b>Avid learner.</b> I have a strong appetite for learning new technologies and paradigms.</li>
+                <li><b>Team player</b> I write code with other developers in mind.</li>
               </ul>
             </div>
             
@@ -181,9 +200,8 @@
               <a name="active"></a>
               <h4><a href="#active">Active participant of the local tech community</a></h4>
               <ul>
-                <li><b>Hackathons.</b> I've participated to the last two editions of <a href="https://hackforacause.io">Hack for a cause</a> and earned cash prizes each time.</li>
-                <li><b>Meetups.</b> I regularly attend social and technical gatherings organized by <a href="https://www.meetup.com/EugeneTech">Eugene Tech</a> and other groups such as <a href="https://www.meetup.com/Elm-Eug">Elm Eug</a>.</li>
-                <li><b>Talks and conferences.</b> I go to discussions and workshops such as <a href="https://eugenewebdevs.com">Eugene Web Devs</a> and <a href="http://communities.techstars.com/usa/eugene/startup-weekend/">Eugene Startup Weekend</a>.</li>
+                <li><b>Hackathons.</b> I enjoy building apps in new environments. I've participated to the last two editions of <a href="https://hackforacause.io">Hack for a cause</a> and earned cash prizes each time.</li>
+                <li><b>Meetups & Talks.</b> I regularly attend social and technical gatherings organized by <a href="https://www.meetup.com/EugeneTech">Eugene Tech</a> and other groups such as <a href="https://www.meetup.com/Elm-Eug">Elm Eug</a>.</li>
               </ul>
             </div>
             
@@ -192,7 +210,7 @@
               <h4><a href="#quality">Modern tools for quality software</a></h4>
               <ul>
                 <li><b>Agile.</b> I am comfortable with the processes of iterative development.</li>
-                <li><b>Peer reviews.</b> I value my coworkers' input and use their feedback to become a better programmer.</li>
+                <li><b>Peer reviews.</b> I value my coworkers' input and take their feedback into consideration in order to become a better programmer.</li>
                 <li><b>Version control and dependencies.</b> I am familiar with utilities such as git, the GitHub platform, and npm.</li>
               </ul>
             </div>
@@ -433,37 +451,41 @@
       </section>
 
       <section id="contact">
+        <iframe id="map" src="https://www.google.com/maps/d/embed?mid=15jRgnMyTE2jaTPdA-wMGSGmMHvcOsgdR"></iframe>
         <a name="contact"></a>
-        <div id="contact-form">
-          <h4><a href="#contact">Get in touch</a></h4>
-          <form onSubmit="handleContactForm(event)">
-            <label>name</label>
-            <input name="name" required>
-            <label>email</label>
-            <input type="email" name="email" required>
-            <label>subject</label>
-            <input name="subject">
-            <label>message</label>
-            <textarea name="message" placeholder="Bonjour !" required></textarea>
-            <label>please enter the characters and numbers on the image below</label>
-            <input name="captcha" required>
-            <img id="captcha-img">
-            <button>Send</button>
-            <div id="sending" style="display: none;">Please wait...</div>
-            <div id="validation"></div>
-          </form>
+        <div class="container">
+          <div id="contact-form">
+            <h4><a href="#contact">Get in touch</a></h4>
+            <form onSubmit="handleContactForm(event)">
+              <label>name</label>
+              <input name="name" required>
+              <label>email</label>
+              <input type="email" name="email" required>
+              <label>subject</label>
+              <input name="subject">
+              <label>message</label>
+              <textarea name="message" placeholder="Bonjour !" required></textarea>
+              <label>please enter the characters and numbers on the image below</label>
+              <input name="captcha" required>
+              <img id="captcha-img">
+              <button>Send</button>
+              <div id="sending" style="display: none;">Please wait...</div>
+              <div id="validation"></div>
+            </form>
+          </div>
+          <div id="thankyou" style="display: none;">Thank you! I will get back to you very soon.</div>
         </div>
-        <div id="thankyou" style="display: none;">Thank you! I will get back to you very soon.</div>
       </section>
-      
-      <script>
-        pickCaptcha()
-      </script>
 
       <footer>
         <a href="#top">
         yves<span class="suffix">gurcan</span>.com</a>
       </footer>
+
+      <script>
+        pickCaptcha()
+        getDurations()
+      </script>
 
   </body>
 </html>
