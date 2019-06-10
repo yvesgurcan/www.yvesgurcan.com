@@ -103,6 +103,9 @@ button {
 }
 
 .desktop {
+  @include breakpoint(medium) {
+    display: none !important;
+    }
 
   @include breakpoint(small) {
     display: none !important;
@@ -113,31 +116,14 @@ button {
 .mobile {
   display: none !important;
 
-  @include breakpoint(small) {
-    display: block !important;
-  }
-
-}
-
-.tablet {
-  display: none !important;
-
   @include breakpoint(medium) {
     display: block !important;
   }
 
-}
-
-.exclude-mobile {
   @include breakpoint(small) {
-    display: none !important;
+    display: block !important;
   }
-}
 
-.exclude-tablet {
-  @include breakpoint(medium) {
-    display: none !important;
-  }
 }
 
 nav {
@@ -176,22 +162,14 @@ nav#menu {
     display: flex;
     justify-content: flex-end;
 
-    @include breakpoint(medium) {
-      padding-right: 5px;
-    }
-
-    @include breakpoint(small) {
-      display: none;
-    }
-
     a {
       text-transform: uppercase;
       color: $invert-color;
       margin-right: 20px;
 
-      @include breakpoint(medium) {
-        margin-right: 4px;
-        font-size: 94%;
+      @include breakpoint(small) {
+        margin-right: 10px;
+        font-size: 85%;
       }
 
   
