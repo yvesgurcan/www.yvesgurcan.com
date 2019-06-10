@@ -14,10 +14,7 @@ $border-radius: 5px;
 @mixin breakpoint($class) {
 
   @if $class == small {
-    @media (max-width: 550px) { @content; }
-  }
-  @else if $class == medium2 {
-    @media (max-width: 700px) { @content; }
+    @media (max-width: 650px) { @content; }
   }
   @else if $class == medium {
     @media (max-width: 900px) { @content; }
