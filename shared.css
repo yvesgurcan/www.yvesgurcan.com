@@ -102,7 +102,8 @@ button {
 
 nav {
   position: fixed;
-  z-index: 999; }
+  z-index: 999;
+  height: 35px}
 
 #mobile-menu:target {
   visibility: visible; }
@@ -188,7 +189,7 @@ nav#menu {
     nav#menu div a {
       text-transform: uppercase;
       color: white;
-      margin-right: 7px; }
+      margin-right: 20px; }
       @media (max-width: 900px) {
         nav#menu div a {
           margin-right: 4px;
@@ -201,7 +202,7 @@ nav#social {
   flex-direction: row;
   width: 64px;
   right: 15px;
-  margin-top: 40px; }
+  margin-top: 55px; }
   @media (max-width: 550px) {
     nav#social {
       position: static;

@@ -145,63 +145,6 @@ nav {
   z-index: 999;
 }
 
-#mobile-menu:target {
-  visibility: visible;
-}
-
-nav#mobile-menu {
-  visibility: hidden;
-  width: 100vw;
-  background: $invert-background;
-  height: 100vh;
-  font-size: 20px;
-  margin-top: 31px;
-
-  #links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-    #close {
-      height: 30px;
-      width: 30px;
-      margin-top: -30px;
-      margin-right: 20px;
-      user-select: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      a {
-        cursor: pointer;
-        color: $invert-color;
-        padding: 12px;
-
-        &:hover {
-          color: $link-color;
-        }
-
-      }
-
-    }
-  
-    #link-items {
-        a {
-        display: block;
-        color: $invert-color;
-        padding: 12px;
-
-        &:hover {
-          color: $link-color;
-        }
-
-      }
-    } 
-
-  }
-
-}
-
 nav#menu {
   display: flex;
   justify-content: space-between;
@@ -211,6 +154,7 @@ nav#menu {
   margin: 0;
   padding: 5px;
   padding-right: 40px;
+  height: 35px;
 
   @include breakpoint(small) {
     z-index: 900;
@@ -226,32 +170,6 @@ nav#menu {
     a {
       color: $invert-color;
     }
-
-    #hamburger {
-      
-      display: none;
-      @include breakpoint(small) {
-        display: flex;
-      }
-
-      width: 20px;
-      margin-right: 5px;
-      margin-top: 5px;
-      flex-direction: column-reverse;
-
-      a {
-        cursor: pointer;
-      }
-
-      span {
-        display: block;
-        margin-top: 2px;
-        background: $invert-color;
-        height: 3px;
-        width: 20px;
-      }
-    }
-
   }
 
   div {
@@ -269,7 +187,7 @@ nav#menu {
     a {
       text-transform: uppercase;
       color: $invert-color;
-      margin-right: 7px;
+      margin-right: 20px;
 
       @include breakpoint(medium) {
         margin-right: 4px;
@@ -293,7 +211,7 @@ nav#social {
   flex-direction: row;
   width: 64px;
   right: 15px;
-  margin-top: 40px;
+  margin-top: 50px;
 
   @include breakpoint(small) {
     position: static;

@@ -6,6 +6,7 @@ header {
   display: flex;
   flex-direction: column;
   background-size: cover;
+  background-position: center;
 
   #hero {
     background: $overlay-background1;
@@ -117,16 +118,46 @@ section {
   }
 
   &#about {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    color: $invert-color;
+    overflow: hidden;
+    height: 110vh;
+    justify-content: center;
+    align-items: center;
 
-      background: $code-background;
-      padding-bottom: 0;
-      color: $invert-color;
+    iframe {
+        height: 110vh;
+        border: 0;
+        width: 100vw;
+        z-index: 1;
+        position: absolute;
+      }
+
+    .container {
+        z-index: 2;
+        box-sizing: border-box;
+        padding-top: 60px;
+        background: rgba(0, 0, 0, 0.7);
+        width: 90vw;
+
+        @include breakpoint(medium) {
+            width: 95vw;
+        }
+
+        @include breakpoint(small) {
+            width: 100vw;
+        }
+      }
 
       h4 a {
         color: $invert-color;
       }
 
       .content {
+        width: 100%;
+
         display: flex;
         justify-content: center;
 
@@ -158,10 +189,15 @@ section {
           border-radius: $border-radius;
 
           @include breakpoint(small) {
-            width: 100%;
+            display: flex;
+            margin: auto;
           }
         }
 
+      }
+
+      .ee {
+          cursor: pointer;
       }
 
   }
@@ -227,20 +263,17 @@ section {
           }
         }
 
-
-
         ul {
           list-style-type: none;
           padding-left: 0;
         }
-
-
 
       }
 
     }
 
     .background {
+        padding-top: 60px;
       max-width: 1100px;
       margin: auto;
       color: $code-color;
@@ -294,15 +327,27 @@ section {
 
   }
 
-  &#javascript {
-    max-width: $max-width2;
+  &#javascript { 
+    max-width: 800px;
     margin: auto;
-    
+
+    #stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        b {
+            font-size: 18px;
+            margin-left: -20px;
+        }
+    }
+
     #technologies {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      margin-top: 30px;
+      margin-top: 10px;
 
       @include breakpoint(small) {
         display: block;
@@ -310,12 +355,13 @@ section {
 
       & > div {
         margin: 5px;
-        padding: $small-padding;
+        padding: 20px;
         background: $overlay-background2;
         border-radius: $border-radius;
         z-index: 2;
         position: relative;
         text-align: center;
+        flex-grow: 1;
 
         @include breakpoint(medium) {
           padding: 6px;
@@ -329,276 +375,6 @@ section {
 
       }
       
-    }
-
-  }
-
-  &#portfolio {
-    background: $highlight-background;
-
-    #projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      @include breakpoint(small) {
-        display: block;
-      }
-
-      .project {
-
-        &.overlay {
-          padding: $small-padding;
-        }
-
-        margin: $small-padding;
-        text-align: center;
-        flex-basis: 35%;
-
-        @include breakpoint(large) {
-          flex-basis: 35%;
-        }
-
-        @include breakpoint(medium) {
-          flex-basis: 100%;
-        }
-
-        @include breakpoint(small) {
-          flex-basis: 100%;
-        }
-
-        details > div {
-          text-align: left;
-          animation: showDetails .4s ease-in-out;
-        }
-
-        @keyframes showDetails {
-          0%    {opacity: 0;}
-          100%  {opacity: 1;}
-        }
-
-        .tech span {
-          display: inline-block;
-          background: $overlay-background2;
-          color: #555;
-          border-radius: $border-radius;
-          padding: 6px;
-          margin-bottom: 2px;
-        }
-
-        details {
-
-          summary {
-            cursor: pointer;
-            outline: none;
-            box-sizing: border-box;
-
-            p {
-              font-weight: bold;
-            }
-
-          }
-
-          summary > div:nth-of-type(2) {
-            margin-bottom: 15px;
-
-            img {
-              max-height: 48px;
-              margin-left: 2px;
-              margin-right: 2px;
-            }
-
-          }
-
-          summary::-webkit-details-marker {
-            display: none;
-          }
-
-          summary::after {
-            content: "Learn More";
-            margin-bottom: 10px;
-            background: $button-background;
-            color: $button-color;
-            border-radius: $border-radius;
-            padding: 10px;
-            padding-left: 30px;
-            padding-right: 30px;
-
-            @include breakpoint(small) {
-              padding-left: 10px;
-              padding-right: 10px;
-              display: block;
-            }  
-
-          }
-
-        }
-
-        details[open] summary:after {
-          content: "";
-          display: none;
-        }
-
-        ul {
-          -webkit-padding-start: 0;
-    
-          li {
-            -webkit-margin-start: 20px;
-          }
-    
-        }
-
-        a {
-          word-break: break-all;
-        }
-
-      }
-
-    }
-
-
-
-  }
-
-  &#resources {
-    max-width: $max-width;
-    margin: auto;
-
-    h5 {
-      text-align: center;
-    }
-
-    #list {
-      display: flex;
-
-      @include breakpoint(small) {
-        display: block;
-      }
-
-      .item {
-        flex-basis: 50%;
-        margin: 30px;
-
-      }
-
-    }
-
-  }
-
-  &#contact {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    background: $invert-background;
-    color: $invert-color;
-    overflow: hidden;
-
-    iframe {
-      margin-top: -50px;
-      height: 800px;
-      border: 0;
-      min-width: 500px;
-
-      @include breakpoint(small) {
-        margin-left: -100px;
-      }  
-
-    }
-
-    .container {
-      z-index: 200;
-      position: absolute;
-      width: 100%;
-      pointer-events: none;
-    }
-
-    #contact-form {
-      padding-top: $standard-padding;
-
-      @include breakpoint(medium) {
-        padding-top: $medium-padding;
-      }
-
-      @include breakpoint(small) {
-        padding-top: $small-padding;
-      }
-
-    }
-
-    h4 a {
-      color: $invert-color;
-      pointer-events: all;
-    }
-
-    div {
-      margin: auto;
-      transition: opacity 0.9s;
-
-      form {
-        width: $max-width3;
-        max-width: 85vw;
-        margin: auto;
-  
-        label, input, textarea {
-          display: block;
-          box-sizing: border-box;
-          width: 100%;
-        }
-  
-        label {
-          margin-top: 10px;
-          margin-bottom: 2px;
-        }
-  
-        input, textarea {
-          padding: 10px;
-          pointer-events: all;
-        }
-  
-        textarea {
-          resize: vertical;
-          min-height: 100px;
-        }
-  
-        img {
-          margin-top: 10px;
-        }
-
-        #sending {
-          margin-top: 10px;
-        }
-
-        #validation {
-          margin-top: 10px;
-          color: red;
-        }
-
-        button {
-          margin-top: 10px;
-          pointer-events: all;
-        }
-  
-      }
-
-      &.disappear {
-        opacity: 0;
-        animation: squish 2s forwards;
-      }
-
-      @keyframes squish {
-        0%   {height: auto}
-        100% {height: 0; visibility: hidden; display: none;}
-      }
-
-    }
-
-    #thankyou {
-      display: flex;
-      align-items: center;
-      min-height: 80vh;
-      box-sizing: border-box;
-      color: $highlight-color;
-      margin-top: -50px;
     }
 
   }

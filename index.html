@@ -3,72 +3,26 @@
   <head>
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shared.css?v1.1" type="text/css">
-    <link rel="stylesheet" href="style.css?v1.1" type="text/css">
+    <link rel="stylesheet" href="shared.css?v1.2.0" type="text/css">
+    <link rel="stylesheet" href="style.css?v1.2.0" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
-    <script src="getDurations.js?v2.1"></script>
-    <script src="apiKey.js?v1.1"></script>
-    <script src="handleContactForm.js?v1.1"></script>
+    <script src="getDurations.js?v1.2.0"></script>
   </head>
   <body>
 
     <nav id="menu">
       <h1>
-        <div id="hamburger">
-          <a href="#mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
-        </div>
-        <a href="#mobile-menu" class="mobile">yves<span class="suffix">gurcan</span></a>
-        <a href="" class="tablet exclude-mobile">y<span class="suffix">g</span></a>
-        <a href="" class="desktop exclude-tablet">yves<span class="suffix">gurcan</span></a>
+        <a href="" class="mobile">y<span class="suffix">g</span></a>
+        <a href="" class="desktop">yves<span class="suffix">gurcan</span></a>
       </h1>
-      <div>
-        <a href="#about">About</a>
-        <a href="#javascript">JavaScript</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="https://blog.yvesgurcan.com">Blog</a>
-        <a href="https://links.yvesgurcan.com">Links</a>
-        <a href="https://devchoice.yvesgurcan.com">Podcasts</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-
-    <nav id="mobile-menu" class="mobile">
         <div id="links">
           <div id="link-items">
-            <a href="#about">About</a>
+            <a href="#about">about</a>
+            <a href="#code">Passionate</a>
             <a href="#javascript">JavaScript</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="https://blog.yvesgurcan.com">Blog</a>
-            <a href="https://links.yvesgurcan.com">Links</a>
-            <a href="https://devchoice.yvesgurcan.com">Podcasts</a>
-            <a href="#contact">Contact</a>
           </div>
-          <div id="close">
-            <a href="#">&times;</a>
-          <div>
         </div>
-      </nav>
-
-      <nav id="social" class="desktop">
-        <div>
-          <a href="https://github.com/yvesgurcan" target="_blank">
-            <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/social/github.jpg">
-          </a>
-          <a href="https://www.linkedin.com/in/yvesgurcan/" target="_blank">
-            <img id="linkedin" alt="linkedIn profile" title="Click here to go to my LinkedIn profile" src="assets/social/linkedin.png">
-          </a>
-          <a href="mailto:gurcan.yves@gmail.com" target="_blank">
-            <img id="gmail" alt="Send an email" title="Click here to send me an email" src="assets/social/email.png">
-          </a>
-          <a href="https://twitter.com/yvesgurcan" target="_blank">
-            <img id="twitter" alt="Twitter page" title="Click here to go to my Twitter page" src="assets/social/twitter.png">
-          </a>
-        </div>
-      </nav>
+    </nav>
 
       <header>
         <a name="top"></a>
@@ -79,7 +33,7 @@
           <h3>with a curious mind</h3>
         </div>
 
-        <nav id="social" class="mobile">
+        <nav id="social">
           <div>
             <a href="https://github.com/yvesgurcan" target="_blank">
               <img id="github" alt="GitHub profile" title="Click here to go to my GitHub profile" src="assets/social/github.jpg">
@@ -95,21 +49,25 @@
             </a>
           </div>
         </nav>
-
       </header>
 
       <section id="about">
         <a name="about"></a>
-        <h4><a href="#about">Who's this guy?</a></h4>
-        <div class="content">
+        <iframe id="map" src="https://www.google.com/maps/d/embed?mid=15jRgnMyTE2jaTPdA-wMGSGmMHvcOsgdR"></iframe>
+        <div class="container">
+        <div>
+            <h4><a href="#about">Who's this guy?</a></h4>
+            <div class="content">
           <div id="portrait">
             <img src="assets/family.jpg">
           </div>
           <div>
-            <p>I am a developer with <span id="years-of-professional-experience"></span> years of professional experience and <span id="years-of-personal-experience"></span> years of personal experience with web programming.</p>
-            <p>I was born and raised in France. In 2014, I settled in Eugene, Oregon with my wife Ashlee.</p>
-            <p>When I am not coding, I spend my time with my <span id="age-of-amelie"></span> daughter, Amélie.</p>
-            <p>I am fascinated by <span onClick="ee()">1994</span> videogame <a href="http://blog.yvesgurcan.com/2018/04/27/doom.html">Doom II</a></span>.</p>
+            <p>I am a software engineer with <span id="years-of-professional-experience"></span> years of professional experience.</p>
+            <p>Born and raised in France, I moved to the Pacific Northwest with my wife Ashlee in 2014.</p>
+            <p>When I am not coding, you'll probably find me at the park with my <span id="age-of-amelie"></span> daughter, Amélie.</p>
+            <p>I am fascinated by <span class="ee" onClick="ee()">1994</span> videogame <a href="http://blog.yvesgurcan.com/2018/04/27/doom.html">Doom II</a></span>.</p>
+          </div>
+          </div>
           </div>
         </div>
       </section>
@@ -216,23 +174,22 @@
 
       </section>
 
-      <section id="contact">
-        <iframe id="map" src="https://www.google.com/maps/d/embed?mid=15jRgnMyTE2jaTPdA-wMGSGmMHvcOsgdR"></iframe>
-        <div class="container">
-        <div id="contact-form">
-        <h4><a href="#javascript">JavaScript all the way</a></h4>
-        <p>Since JavaScript is everywhere, my expertise of this programming language allows me to be comfortable with the whole stack and maximize my skills as a programmer.</p>
-        <p>My go-to stack usually includes:</p>
+      <section id="javascript">
+        <h4><a href="#javascript">JavaScript all the things!</a></h4>
+        <p>I first learnt JavaScript about <span id="years-of-personal-experience"></span> years ago. Things have changed a lot since then! I've kept my knowledge up to date by adopting bleeding edge technologies and tools such as <code>webpack</code>, <code>npm</code>, and <code>git</code>. Since JavaScript is everywhere, my expertise allows me to be comfortable both on the front end and the back end!</p>
+        <div id="stack">
+        <b>My favorite stack:</b>
         <ul>
-          <li>React/Redux on the client-side.</li>
-          <li>Node/Express on the backend.</li>
-          <li>AWS API Gateway, Lambda and dynamoDB.</li>
-          <li>GitHub Pages to deploy my project straight from the repository almost instantly.</li>
+          <li>React and GraphQL</li>
+          <li>Node and Express</li>
+          <li>AWS</li>
+          <li>GitHub Pages</li>
         </ul>
+        </div>
         <div id="technologies">
           <div>
             <img alt="React" title="React" src="assets/tech/react.png">
-            <img alt="Redux" title="Redux" src="assets/tech/redux.png">
+            <img alt="GraphQL" title="GraphQL" src="assets/tech/graphql.png">
           </div>
           <div>
             <img alt="Node" title="Node" src="assets/tech/node.png">
@@ -246,8 +203,6 @@
           <div>
             <img alt="GitHub Pages" title="GitHub Pages" src="assets/tech/github.png">
           </div>
-        </div>
-        </div>
         </div>
       </section>
 
