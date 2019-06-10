@@ -179,18 +179,18 @@ section {
         color: orange; }
       section#code .background .number-highlight {
         color: lime; }
-  section#javascript {
+  #javascript {
     max-width: 850px;
     margin: auto; }
-    section#javascript #technologies {
+    #javascript #technologies {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 30px; }
       @media (max-width: 550px) {
-        section#javascript #technologies {
+        #javascript #technologies {
           display: block; } }
-      section#javascript #technologies > div {
+      #javascript #technologies > div {
         margin: 5px;
         padding: 25px;
         background: rgba(230, 230, 230, 0.8);
@@ -199,9 +199,9 @@ section {
         position: relative;
         text-align: center; }
         @media (max-width: 900px) {
-          section#javascript #technologies > div {
+          #javascript #technologies > div {
             padding: 6px; } }
-        section#javascript #technologies > div img {
+        #javascript #technologies > div img {
           max-width: 110px;
           max-height: 60px;
           vertical-align: middle; }
