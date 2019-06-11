@@ -3,10 +3,11 @@
   <head>
     <title>yvesgurcan.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shared.css?v1.2.0" type="text/css">
-    <link rel="stylesheet" href="style.css?v1.2.0" type="text/css">
+    <link rel="stylesheet" href="shared.css?v1.2.1" type="text/css">
+    <link rel="stylesheet" href="style.css?v1.2.1" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
-    <script src="getDurations.js?v1.2.0"></script>
+    <script src="getDurations.js?v1.2.1"></script>
+    <script type="text/javascript" src="scripts/moment-2.24.0.min.js"></script>
   </head>
   <body>
 
@@ -21,6 +22,7 @@
             <a href="#teamplayer">Team Player</a>
             <a href="#responsible">Responsible</a>
             <a href="#javascript">JavaScript</a>
+            <a href="#activity">Activity</a>
           </div>
         </div>
     </nav>
@@ -209,12 +211,19 @@
         </div>
         </div>
       </section>
+      
+      <section id="activity" class="view">
+        <ul id="social-wall">
+        </ul>
+      </section>
 
       <footer>
         <a href="#top">
         yves<span class="suffix">gurcan</span>.com</a>
       </footer>
 
+      <script type="text/javascript" src="scripts/GitHubEvent.js?1.2.1"></script>
+      <script type="text/javascript" src="scripts/handle_github_events.js?1.2.1"></script>
       <script>
         getDurations()
       </script>

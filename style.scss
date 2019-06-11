@@ -148,6 +148,7 @@ section {
         width: 90vw;
 
         @include breakpoint(medium) {
+            padding-top: 30px;
             width: 95vw;
         }
 
@@ -162,11 +163,13 @@ section {
 
       .content {
         width: 100%;
+        padding-bottom: 40px;
 
         display: flex;
         justify-content: center;
 
         @include breakpoint(medium) {
+            padding-bottom: 0px;
           flex-direction: column;
         }
 
@@ -175,7 +178,13 @@ section {
           align-self: center;
 
           @include breakpoint(small) {
-            padding: 10px;
+            padding: 5px;
+            padding-left: 15px;
+          }
+
+          @include breakpoint(medium) {
+            padding: 8px;
+            padding-left: 15px;
           }
 
         }
@@ -390,4 +399,86 @@ section {
 
   }
 
+    &#activity {
+        color: white;
+        max-width: 1290px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        h4 {
+            padding-top: 30px;
+
+            a {
+                color: white;
+            }
+        }
+    
+        @media (max-width: 1329px) {
+            h4 {
+                text-align: center;
+            }
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        #social-wall {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        #social-wall-inner {
+            padding-bottom: 100px;
+        }
+    
+        .event {
+            background: rgb(160, 160, 160);
+            padding: 20px;
+            margin: 15px;
+            width: 400px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+
+            a {
+                color: rgb(85, 85, 85);
+            }
+        }
+    
+        .event-inner {
+            display: flex;
+        }
+    
+        .event-icon {
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+    
+        .event-icon-inner {
+            width: 30px;
+        }
+    
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 60px;
+        }
+    
+        .event-title::first-letter {
+            text-transform: uppercase;
+        }
+    
+        a.event-title {
+            color: unset;
+        }
+    
+        .event-time {
+            font-style: italic;
+            font-size: 14px;
+        }
+    }
 }
