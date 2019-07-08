@@ -1,6 +1,6 @@
 # yvesgurcan.com
 
-This is my personal website.
+Yves' personal website.
 
 The UI was written from scratch in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
 
