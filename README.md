@@ -1,10 +1,6 @@
 # yvesgurcan.com
 
-Yves' personal website.
-
-The UI was written from scratch in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
-
-## User Interface
+Yves' personal website. Written from scratch in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
 
 ### Development
 
@@ -15,8 +11,8 @@ This will run a webpack server with hot reload enabled.
 
 ### Deployment
 
-It is not necessary to run `npm install` to deploy this website to GitHub Pages, as the HTML and JS files do not require any compilation.
+The HTML and JavaScript do not need to be compiled. Pushing updates will publish the new version on GitHub Pages.
 
-However, the stylesheets are compiled from SASS to CSS. If you want to update the `.scss` files, you must use `sass`. You can watch any change on the stylesheet files.
+However, the stylesheets must be compiled from SASS to CSS. You can watch any change on the stylesheet files.
 
     npm compile:sass
