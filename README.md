@@ -1,6 +1,6 @@
-# yvesgurcan.com
+# [yvesgurcan.com](https://yvesgurcan.com)
 
-Yves' personal website. Written from scratch in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
+Written from scratch in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
 
 ### Development
 
