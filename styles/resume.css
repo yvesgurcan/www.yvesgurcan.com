@@ -1,0 +1,174 @@
+body.yg-theme-doom {
+    background-image: url('../assets/doom/slime16.png');
+}
+
+.yg-container {
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.yg-resume a {
+    text-decoration: none;
+}
+
+.yg-resume a:hover {
+    text-decoration: underline;
+}
+
+.yg-resume-experience {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: lightgrey;
+    padding: 20px;
+    animation: reveal 1s;
+}
+
+#yg-resume-cbt {
+    background-image: url('../assets/cbtnuggets.png');
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: calc(100% - 8px) 3px;
+    background-blend-mode: soft-light;
+}
+
+#yg-resume-emberex {
+    background-image: url('../assets/emberex.png');
+    background-repeat: no-repeat;
+    background-size: auto 75px;
+    background-position: calc(100% + 5px) 2px;
+    background-blend-mode: soft-light;
+}
+
+#yg-resume-lfm {
+    background-image: url('../assets/lfm.jpg');
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: calc(100% - 7px) 7px;
+    background-blend-mode: soft-light;
+}
+
+#yg-resume-lpp {
+    background-image: url('../assets/lpp.png');
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: calc(100% - 7px) 7px;
+    background-blend-mode: soft-light;
+}
+
+.yg-theme-dark .yg-resume-experience {
+    background: rgb(110, 110, 110);
+}
+
+.yg-resume-experience-header {
+    min-height: 55px;
+}
+
+.yg-theme-doom .yg-resume-experience-header {
+    font-size: 25px;
+    -webkit-text-stroke: 1px rgb(80, 0, 0);
+    letter-spacing: -1px;
+}
+
+
+.yg-resume-experience-info {
+    color: grey;
+    font-size: 25px;
+    margin-top: -5px;
+    margin-bottom: -10px;
+}
+
+.yg-theme-dark .yg-resume-experience-info {
+    color: black;
+}
+
+.yg-theme-doom .yg-resume-experience-info {
+    font-size: 18px;
+    color: rgb(230, 230, 230) !important;
+    -webkit-text-stroke: 1px rgb(140, 140, 140);
+    margin-top: 1px;
+}
+
+.yg-theme-doom .yg-resume-experience-body {
+    font-size: 18px;
+    -webkit-text-stroke: 1px rgb(80, 0, 0);
+    letter-spacing: -1px;
+}
+
+.yg-resume-experience-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.yg-theme-doom .yg-resume-experience-tech-list {
+    color: rgb(230, 230, 230) !important;
+    -webkit-text-stroke: 1px rgb(140, 140, 140);
+}
+
+.yg-resume-experience-tech-list li {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: white;
+    margin: 5px;
+}
+
+.yg-theme-doom .yg-resume-experience-tech-list li {
+    background: inherit;
+    padding-left: 0;
+    padding-top: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.yg-theme-dark .yg-resume-experience-tech-list li {
+    background: black;
+}
+
+
+.yg-resume-experience-apps {
+    margin-top: 20px;
+}
+
+.yg-resume-experience-app-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.yg-resume-experience-app-list img {
+    border: 3px solid black;
+}
+
+.yg-resume-experience-app-image, .yg-resume-experience-app-image-2 {
+    margin: 5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    box-sizing: border-box;
+}
+
+.yg-resume-experience-app-image {
+    width: 225px;
+}
+
+.yg-resume-experience-app-image-2 {
+    width: 300px;
+}
+
+.yg-resume-experience-app-image img {
+    width: 100%;
+    height: 150px;
+}
+
+.yg-resume-experience-app-image-2 img {
+    width: 100%;
+    height: 140px;
+}
+
+.yg-resume-experience-app-image-3 img {
+    width: 100%;
+    height: 165px;
+}
