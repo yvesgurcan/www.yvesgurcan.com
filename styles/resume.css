@@ -29,14 +29,6 @@
     background-blend-mode: soft-light;
 }
 
-#yg-resume-emberex {
-    background-image: url('../assets/emberex.png');
-    background-repeat: no-repeat;
-    background-size: auto 75px;
-    background-position: calc(100% + 5px) 2px;
-    background-blend-mode: soft-light;
-}
-
 #yg-resume-lfm {
     background-image: url('../assets/lfm.jpg');
     background-repeat: no-repeat;
@@ -65,7 +57,7 @@
 
 
 .yg-resume-experience-info {
-    color: slategrey;
+    color: rgb(120, 120, 120);
     font-size: 18px;
     margin-bottom: -5px;
 }
