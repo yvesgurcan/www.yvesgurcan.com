@@ -49,6 +49,9 @@
     background: rgb(110, 110, 110);
 }
 
+.yg-resume-experience-header {
+    min-height: 52px;
+}
 
 .yg-resume-experience-info {
     color: rgb(120, 120, 120);
