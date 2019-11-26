@@ -31,17 +31,5 @@
                 {% endfor %}
             </ul>
         </div>
-        <div class="yg-resume-experience-apps">
-            Applications:
-            <div class="yg-resume-experience-app-list">
-                {% for application in include.applications %}
-                    <div class="yg-resume-experience-app-image">
-                        <a href="../portfolio/{{ application.slug }}">
-                            <img title="{{ application.name }}" alt="{{ application.name }}" src="../../assets/{{ application.image }}.png">
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
     </div>
 </div>
