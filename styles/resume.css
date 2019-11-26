@@ -57,10 +57,6 @@
     background: rgb(110, 110, 110);
 }
 
-.yg-resume-experience-header {
-    min-height: 55px;
-}
-
 .yg-theme-doom .yg-resume-experience-header {
     font-size: 25px;
     -webkit-text-stroke: 1px rgb(80, 0, 0);
