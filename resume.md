@@ -2,7 +2,7 @@
 layout: resume
 window_title: resume
 ---
-# Resume
+# Yves Gurcan
 {% for experience in site.data.resume %}
 {% include resume_experience.html
     id=experience.id
