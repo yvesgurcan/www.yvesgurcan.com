@@ -13,7 +13,7 @@
   details: >
     - Built the MVP and wrote the technical documentation of a web application which enables content creators to produce multimedia courses thanks to EC2 and S3.
 
-    - Created a service that aggregates and cache data from various microservices by leveraging AWS Redis, leading to simpler client queries and faster responses.
+    - Created a service that aggregates and cache data from various microservices with AWS Redis, leading to simpler client queries and faster responses.
 
 
     - Developed the internal training dashboard, an application which leverages Lambda, DynamoDB, and Redshift.
