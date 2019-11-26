@@ -49,23 +49,11 @@
     background: rgb(110, 110, 110);
 }
 
-.yg-theme-doom .yg-resume-experience-header {
-    font-size: 25px;
-    -webkit-text-stroke: 1px rgb(80, 0, 0);
-    letter-spacing: -1px;
-}
-
 
 .yg-resume-experience-info {
     color: rgb(120, 120, 120);
     font-size: 18px;
     margin-bottom: -5px;
-}
-
-.yg-theme-doom .yg-resume-experience-body {
-    font-size: 18px;
-    -webkit-text-stroke: 1px rgb(80, 0, 0);
-    letter-spacing: -1px;
 }
 
 .yg-resume-experience-tech-list {
@@ -76,25 +64,12 @@
     padding: 0;
 }
 
-.yg-theme-doom .yg-resume-experience-tech-list {
-    color: rgb(230, 230, 230) !important;
-    -webkit-text-stroke: 1px rgb(140, 140, 140);
-}
-
 .yg-resume-experience-tech-list li {
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
     background: white;
     margin: 5px;
-}
-
-.yg-theme-doom .yg-resume-experience-tech-list li {
-    background: inherit;
-    padding-left: 0;
-    padding-top: 0;
-    margin-left: 0;
-    margin-top: 0;
 }
 
 .yg-theme-dark .yg-resume-experience-tech-list li {
