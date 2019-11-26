@@ -1,0 +1,48 @@
+<div
+    id="yg-resume-{{ include.id }}"
+    class="yg-resume-experience yg-doom-box"
+>
+    <div class="yg-resume-experience-header">
+        <div>
+            {{ include.job_title }}
+            @
+            <a target="_blank" href="{{ include.company.url }}">{{ include.company.name }}</a>
+        </div>
+        <div class="yg-resume-experience-info yg-doom-font-grey">
+            {{ include.dates.start }} &ndash; {{ include.dates.end }}
+            •
+            <a target="_blank" href="{{ include.experience.location.map }}">{{ include.location.name }}</a>
+            {% if include.status %}
+            •
+            {{ include.status }}
+            {% endif %}
+        </div>
+    </div>
+    <hr>
+    <div class="yg-resume-experience-body">
+        <div class="yg-resume-experience-description">
+            {{ include.details | markdownify }}
+        </div>
+        <div class="yg-resume-experience-tech">
+            Technologies:
+            <ul class="yg-resume-experience-tech-list yg-doom-font-grey">
+                {% assign tech = include.technologies | split: ","%}
+                {% for technology in tech %}
+                    <li>{{  technology }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="yg-resume-experience-apps">
+            Applications:
+            <div class="yg-resume-experience-app-list">
+                {% for application in include.applications %}
+                    <div class="yg-resume-experience-app-image">
+                        <a href="../portfolio/{{ application.slug }}">
+                            <img title="{{ application.name }}" alt="{{ application.name }}" src="../../assets/{{ application.image }}.png">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
