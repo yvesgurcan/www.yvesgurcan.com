@@ -8,79 +8,16 @@
     end: Present
   location:
     name: Eugene, OR
-    map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
   status: full-time
-  technologies: React, Node, DynamoDB, Lambda, Kibana
-  applications:
-    - name: Skill Builder
-      slug: skill-builder
-      image: lesson-builder
-    - name: Studio
-      slug: studio
-      image: studio
-    - name: Internal Dashboard
-      slug: dashboard
-      image: internal-dashboard
+  technologies: React, GraphQL/Apollo, Node, DynamoDB, MongoDB, Lambda, Redis
   details: >
-    I own the internal dashboard of this video IT training company. I also maintain the React/Node application that all employees use to submit their required monthly training. My duties include the supervision of updates brought to the dashboard by fellow developers, such as major modifications to DynamoDB tables and the addition of new tools to the app.
+    - Built the MVP and wrote the technical documentation of a web application which enables content creators to produce multimedia courses.
 
 
-    I participated to the modernization of Studio, the application used by in-house trainers to publish content to the CBT Nuggets platform. This project included updates to various Node microservices, the creation of a GraphQL server, as well as the implementation of an Apollo client in React.
-  fr:
-    job_title: Ingénieur informaticien
-    dates:
-      start: juin 2018
-      end: présent
-    location:
-      name: Eugene, Oregon, Etats-Unis
-      map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
-    status: plein temps
+    - Created a service that aggregates and cache data from various microservices by leveraging AWS Redis, leading to simpler client queries and faster responses.
 
 
-
-- id: emberex
-  job_title: Web Developer
-  company:
-    name: Emberex
-    url: https://www.emberex.com
-  dates:
-    start: February 2018
-    end: June 2018
-  location:
-    name: Eugene, OR
-    map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
-  status: full-time
-  technologies: React, Node, Java, Swift, Objective-C, PHP, PostgreSQL, MySQL
-  applications:
-    - name: Transition Gradebook
-      slug: transition-gradebook
-      image: transition-gradebook
-    - name: Stem Familia
-      slug: stem
-      image: stem
-    - name: Uppit
-      slug: uppit
-      image: uppit
-    - name: Gamebot
-      slug: gamebot
-      image: gamebot
-  details: >
-    I was responsible of half of the dev work in a close-knit team at this 10-year-old educational tech company.
-
-
-    I wrote grant-funded web applications in React/Node/Postgres as well as mobile applications using bleeding edge technologies such as JavaScript ES7 features, mobX, Cordova, and object relational mapping.
-
-
-    In addition to creating apps from scratch, my duties included the maintenance of projects written in various languages such as Objective-C and PHP.
-  fr:
-    job_title: Développeur web
-    dates:
-      start: février 2018
-      end: juin 2018
-    location:
-      name: Eugene, Oregon, Etats-Unis
-      map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
-    status: plein temps
+    - Stimulated the adoption of new technologies such as GraphQL and styled components throughout the company by leading the React Guild.
 
 - id: lfm
   job_title: Web Developer
@@ -88,34 +25,17 @@
     name: Local Food Marketplace
     url: https://home.localfoodmarketplace.com/
   dates:
-    start: January 2017
+    start: November 2016
     end: February 2018
   location:
     name: Eugene, OR
-    map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
   status: full-time
-  technologies: React, .NET, C#, Microsoft SQL Server, Visual Basic
-  applications:
-    - name: Grow
-      slug: grow
-      image: grow
+  technologies: React, C#, MSSQL
   details: >
-    I was hired by this 4-person company to rewrite the core application of Local Food Marketplace from Visual Basic to .NET.
-
-
-    As a result, I developed Grow, a platform that helps producers manage the sales, harvest, and distribution of their produce to retail and wholesale clients.
-
-
-    I also created new modules such as inventory and CSA management. Subscriptions to these modules significantly increased the revenue of Local Food Marketplace.
-  fr:
-    job_title: Développeur web
-    dates:
-      start: janvier 2017
-      end: février 2018
-    location:
-      name: Eugene, Oregon, Etats-Unis
-      map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
-    status: plein temps
+    - Rewrote the core web application of the company with React and a Web API written in C#, leading to an improved user experience for the 100+ food hubs consuming the app.
+    
+    
+    - Developed add-on modules by creating new UIs and writing stored procedures, which increased the revenue of the company.
 
 - id: lpp
   job_title: Founder
@@ -126,18 +46,10 @@
     end: May 2017
   location:
     name: Eugene, OR
-    map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
   status: full-time
-  technologies: JavaScript, CSS, Google API
-  applications:
-    - name: Le Petit Pain Bakery
-      slug: lpp
-      image: lpp-app
-  fr:
-    job_title: Fondateur
-    dates:
-      start: mai 2015
-      end: mai 2017
-    location:
-      name: Eugene, Oregon, Etats-Unis
-      map: https://www.google.com/maps/place/Eugene,+OR/@42.7701085,-123.9312688,6z
+  technologies: JavaScript
+  details: >
+    - Designed a web application integrated with Google APIs, leading to an increase of online orders.
+    
+    
+    - Developed a logged-in experience to monitor orders and customer data, facilitating the optimization of delivery routes, inventory usage, and baking time.
