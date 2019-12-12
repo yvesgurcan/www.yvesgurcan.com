@@ -11,12 +11,13 @@
   status: full-time
   technologies: React, GraphQL/Apollo, Node, EC2, S3, DynamoDB, MongoDB, Lambda, Redis
   details: >
-    - Built the MVP and wrote the technical documentation of a web application which enables content creators to produce multimedia courses thanks to EC2 and S3.
-
-    - Created a service that aggregates and cache data from various microservices with Amazon ElastiCache for Redis, leading to simpler client queries and faster responses.
+    - Built the MVP and wrote the technical documentation of a web application which enables content creators to produce multimedia courses.
 
 
-    - Developed the internal training dashboard, an application which leverages Lambda, DynamoDB, and Redshift.
+    - Developed business-critical features in several distributed Node services hosted on AWS by adding, deleting, and updating REST endpoints that allow content managers to curate existing courses into playlists.
+
+
+    - Developed the internal training dashboard, an application which leverages Lambda, DynamoDB, and Redshift to enable the training team to monitor employees training requirements.
 
 
     - Stimulated the adoption of new technologies such as GraphQL and styled components throughout the company by leading the React Guild.
@@ -34,13 +35,13 @@
   status: full-time
   technologies: React, C#, MSSQL
   details: >
-    - Rewrote the core web application of the company with React and a Web API written in C#, leading to an improved user experience for the 100+ food hubs consuming the app.
+    - Re-architected and rewrote the core web application of the company with React and a Web API written in C#, leading to an improved user experience for the 100+ food hubs using this web application.
     
     
-    - Developed add-on modules by creating new UIs and writing MSSQL stored procedures, which increased the revenue of the company.
+    - Worked with stakeholders to carve out the requirements of new features and produced wireframes as a basis for new web views and SQL database models.
 
 
-    - Trained in-house developers on how to use React by spending one-on-one time with them.
+    - Trained in-house developers by spending one-on-one time with them and empower them with the development of the codebase.
 
 - id: lpp
   job_title: Founder
