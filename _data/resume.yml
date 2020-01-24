@@ -1,3 +1,18 @@
+- id: nike
+  job_title: Senior Software Engineer
+  company:
+    name: Nike
+    url: https://www.nike.com
+  dates:
+    start: January 2020
+    end: Present
+  location:
+    name: Hillsboro, OR
+  status: contractor
+  technologies: Node, Cloud Formation, Lambda, API Gateway
+  details: >
+    - Contributes to the development of an API hosted in AWS (API Gateway, Lambda, Cloud Formation) to improve the process of creating product offerings with strategic accounts.
+
 - id: cbt
   job_title: Software Engineer
   company:
