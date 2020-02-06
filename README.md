@@ -1,5 +1,3 @@
-# [yvesgurcan.com](https://yvesgurcan.com)
-
 Written from scratch in HTML and CSS (with the help of the SASS pre-processor) and a dash of JavaScript.
 
 ### Development
