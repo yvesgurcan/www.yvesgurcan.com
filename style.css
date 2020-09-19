@@ -203,6 +203,7 @@ section#about .ee {
 section#code {
   background: #111;
   overflow: hidden;
+  min-height: 90vh;
 }
 section#code .overlay {
   max-width: 850px;
