@@ -277,7 +277,7 @@ section#code .background {
 }
 section#code .background code {
   margin-left: -150px;
-  margin-top: -40px;
+  margin-top: -90px;
   position: absolute;
   filter: blur(1.5px);
 }
