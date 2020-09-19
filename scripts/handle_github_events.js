@@ -143,7 +143,7 @@ const handleRepoUrls = async () => {
                 const eventIconInner = document.createElement('img');
                 eventIconInner.classList = 'event-icon-inner';
                 eventIconInner.setAttribute('src', event.icon);
-                eventIconInner.setAttribute('alt', event.icon);
+                eventIconInner.setAttribute('alt', event.title);
 
                 eventIcon.append(eventIconInner);
                 eventItemInner.append(eventIcon);
