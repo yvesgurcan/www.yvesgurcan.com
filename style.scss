@@ -219,6 +219,7 @@ section {
   &#code {
     background: $code-background;
     overflow: hidden;
+    min-height: 90vh;
 
     .overlay {
       max-width: $max-width2;
